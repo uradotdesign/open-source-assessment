@@ -1,0 +1,383 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/inter/inter-regular.woff2") format("woff2"),
+    url("../fonts/inter/inter-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/inter/inter-500.woff2") format("woff2"),
+    url("../fonts/inter/inter-500.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/inter/inter-700.woff2") format("woff2"),
+    url("../fonts/inter/inter-700.woff") format("woff");
+}
+
+:root {
+  font-size: 16px;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.54;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  background-color: #f8f8f8;
+  counter-reset: steps;
+}
+
+.content {
+  background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3.375rem;
+  color: #005cab;
+}
+
+h2 {
+  font-size: 1.625rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  width: 100%;
+  border: none;
+  background: #e6edf2;
+  height: 1px;
+}
+
+.hidden {
+  display: none;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  width: auto;
+  top: 5px;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  z-index: 100000;
+}
+
+details {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+details > summary {
+  font-size: 20px;
+  font-weight: bold;
+  color: #002d62;
+  background: #e6edf2;
+  border-radius: 5px 5px 0px 0px;
+  padding: 20px;
+  outline: none;
+  list-style: none !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  transition: color 0.3s ease-in-out;
+}
+
+details > summary:hover {
+  background: #e6edf9;
+}
+
+details > summary:focus-visible {
+  outline: 2px solid #333;
+}
+
+details > summary::marker {
+  display: none !important;
+}
+
+details > summary::-webkit-details-marker {
+  display: none !important;
+}
+
+details > summary:after {
+  content: "\f078";
+  font-family: "font awesome 5 free";
+  font-weight: 700;
+  color: #002d62;
+  position: relative;
+}
+
+details[open] > summary:after {
+  content: "\f077";
+  font-family: "font awesome 5 free";
+  font-weight: 700;
+  color: #002d62;
+}
+
+details[open] {
+  background-color: #f7f7f7;
+  border-radius: 0px 0px 5px 5px;
+}
+
+details[open] > form {
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+details[open] > summary {
+  background: #e6edf2;
+  color: #002d62;
+}
+
+@keyframes details-show {
+  from {
+    opacity: 0;
+    transform: var(--details-translate, translateY(-0.75em));
+  }
+}
+
+details[open] > *:not(summary) {
+  animation: details-show 250ms ease-in-out;
+}
+
+.handbook {
+  text-decoration: none;
+  background: rgba(0, 92, 171, 0.05);
+  padding: 10px 50px 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  color: #005cab;
+  transition: 0.3s ease-in-out;
+}
+
+.handbook:hover {
+  background: rgba(0, 92, 171, 0.15);
+  color: #005cab;
+}
+
+.handbook:before {
+  content: "\f02d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.handbook > .description {
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  display: contents;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+
+.blue-text {
+  color: #005cab;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+label {
+  margin-right: 15px;
+}
+
+textarea {
+  background: #ffffff;
+  border: 1px solid #e6edf2;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  outline: none;
+}
+
+textarea:focus {
+  box-shadow: 0px 0px 4px #005cab;
+  border: 1px solid #0d5cab;
+}
+
+textarea:focus-visible {
+  outline: 2px solid #0d5cab;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+
+.item-header {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+button.back:disabled {
+  color: #0d5cab;
+  background: transparent;
+  border-radius: 5px;
+  border: 2px solid #0d5cab;
+  outline: none;
+  padding: 20px 52px;
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0.3;
+}
+
+button.back:disabled:hover {
+  color: #0d5cab;
+  background: transparent;
+  border-radius: 5px;
+  border: 2px solid #0d5cab;
+  outline: none;
+  padding: 20px 52px;
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0.3;
+}
+
+button.back {
+  color: #0d5cab;
+  background: transparent;
+  border-radius: 5px;
+  border: 2px solid #0d5cab;
+  outline: none;
+  padding: 20px 52px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+}
+
+button.back:hover {
+  color: #fff;
+  background: #0d5cab;
+  border-radius: 5px;
+  border: 2px solid #0d5cab;
+  outline: none;
+  padding: 20px 52px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+button.next {
+  color: #ffffff;
+  background: #0d5cab;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  padding: 20px 52px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+}
+
+button.next:hover {
+  color: #ffffff;
+  background: #0d5ccf;
+}
+
+.action-step:before {
+  counter-increment: steps;
+  content: "" counter(steps) "";
+  padding: 0px 5px;
+  background-color: #4a4a4a;
+  border-radius: 50%;
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+.action-step {
+  border-bottom: 1px solid #e6edf2;
+  margin-bottom: 8px;
+}

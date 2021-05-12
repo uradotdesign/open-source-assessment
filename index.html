@@ -1,0 +1,926 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Open Source Software Assessment - Internews</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+    <div id="main" class="container-fluid">
+        <div class="container px-1 px-lg-3">
+            <header>
+                <div class="navbar navbar-expand-lg navbar-light justify-content-between py-4" role="navigation"
+                    aria-label="Assessment Progress Indicators">
+
+                    <a class="navbar-brand" href="#">
+                        <img loading="lazy" src="assets/images/logo.svg" title="Open Source Assessment from Internews"
+                            alt="Open Source Assessment logo" width="400px">
+                    </a>
+
+                    <div class="nav-collapse">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-assess-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-assess" type="button" role="tab" aria-controls="pills-assess"
+                                    aria-selected="true">Assess</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-strategize-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-strategize" type="button" role="tab"
+                                    aria-controls="pills-strategize" aria-selected="false">Strategize</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-review-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-review" type="button" role="tab" aria-controls="pills-review"
+                                    aria-selected="false">Review</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-discuss-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-discuss" type="button" role="tab"
+                                    aria-controls="pills-discuss" aria-selected="false">Discuss</button>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </header>
+
+            <div class="content p-4 p-lg-5">
+
+                <div class="tab-content" id="pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="pills-assess" role="tabpanel"
+                        aria-labelledby="pills-assess-tab">
+
+                        <section id="description" class="px-0 px-lg-5 pt-3">
+                            <h1 class="mb-3">Assess</h1>
+
+                            <p>For each assessment area, "1" indicates low capacity and "5" indicates robust capacity.
+                            </p>
+
+                            <p>Each score is progressive. For example, a project that scores itself "2" also has the
+                                features
+                                described in "1." A project at a "5" also has all of the features described in 1-4. If
+                                your
+                                project has some capabilities in a higher score but not all of the capabilities in the
+                                scores
+                                below it, use your best judgment to self-score. There will be an opportunity to provide
+                                your
+                                explanation for why you scored the project the way you did for each area.</p>
+
+                            <p>It is in your best interest to score your project as accurately as possible, so that
+                                needs
+                                can be identified and then matched to appropriate resources. (i.e. -- if your project
+                                scores all
+                                5's, it will be difficult to identify any area that could use more support.)</p>
+
+                            <hr class="mt-4">
+                        </section>
+
+                        <section id="content" class="px-0 px-lg-5 pt-3">
+
+                            <details id="code" open>
+                                <summary>Code</summary>
+                                <form>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-0" name="code-score-0">
+                                        <label for="code-score-0"><strong>Score 0</strong>: Does not meet Score 1
+                                            criteria</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-1" name="code-score-1">
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
+                                            Source
+                                            software,
+                                            for distribution to the public at no charge.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-2" name="code-score-2">
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
+                                            discoverable
+                                            and
+                                            publicly accessible.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-3" name="code-score-3">
+                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
+                                            reproducible
+                                            way
+                                            using widely available standard tools.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-4" name="code-score-4">
+                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
+                                            project's
+                                            code is
+                                            available via a source code control system, in a way that allows any
+                                            released
+                                            version to
+                                            be recreated.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-5" name="code-score-5">
+                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
+                                            of code
+                                            is
+                                            established via the source code control system, in a reliable way based on
+                                            strong
+                                            authentication of the committer. When third-party contributions are
+                                            committed,
+                                            commit
+                                            messages provide reliable information about the code provenance.</label>
+                                    </div>
+
+                                    <p class="pt-4 item-header">Importance</p>
+
+                                    <input type="radio" id="importance-not-important" name="importance"
+                                        value="not-important">
+                                    <label for="importance-not-important">Not Important</label>
+
+                                    <input type="radio" id="importance-very-important" name="importance"
+                                        value="very-important">
+                                    <label for="importance-very-important">Very Important</label>
+
+                                    <input type="radio" id="importance-somewhat-important" name="importance"
+                                        value="somewhat-important">
+                                    <label for="importance-somewhat-important">Somewhat Important</label>
+
+                                    <p class="pt-4 item-header">Justification</p>
+
+                                    <textarea id="code-justification" name="code-justification" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                </form>
+                            </details>
+
+                            <details id="licenses-copyright">
+                                <summary>Licenses & Copyright</summary>
+                                <form>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-0" name="code-score-0">
+                                        <label for="code-score-0"><strong>Score 0</strong>: Does not meet Score 1
+                                            criteria</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-1" name="code-score-1">
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
+                                            Source
+                                            software,
+                                            for distribution to the public at no charge.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-2" name="code-score-2">
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
+                                            discoverable
+                                            and
+                                            publicly accessible.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-3" name="code-score-3">
+                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
+                                            reproducible
+                                            way
+                                            using widely available standard tools.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-4" name="code-score-4">
+                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
+                                            project's
+                                            code is
+                                            available via a source code control system, in a way that allows any
+                                            released
+                                            version to
+                                            be recreated.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-5" name="code-score-5">
+                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
+                                            of code
+                                            is
+                                            established via the source code control system, in a reliable way based on
+                                            strong
+                                            authentication of the committer. When third-party contributions are
+                                            committed,
+                                            commit
+                                            messages provide reliable information about the code provenance.</label>
+                                    </div>
+
+                                </form>
+                            </details>
+
+
+                            <details id="releases">
+                                <summary>Releases</summary>
+                                <form>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-0" name="code-score-0">
+                                        <label for="code-score-0"><strong>Score 0</strong>: Does not meet Score 1
+                                            criteria</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-1" name="code-score-1">
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
+                                            Source
+                                            software,
+                                            for distribution to the public at no charge.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-2" name="code-score-2">
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
+                                            discoverable
+                                            and
+                                            publicly accessible.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-3" name="code-score-3">
+                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
+                                            reproducible
+                                            way
+                                            using widely available standard tools.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-4" name="code-score-4">
+                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
+                                            project's
+                                            code is
+                                            available via a source code control system, in a way that allows any
+                                            released
+                                            version to
+                                            be recreated.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-5" name="code-score-5">
+                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
+                                            of code
+                                            is
+                                            established via the source code control system, in a reliable way based on
+                                            strong
+                                            authentication of the committer. When third-party contributions are
+                                            committed,
+                                            commit
+                                            messages provide reliable information about the code provenance.</label>
+                                    </div>
+
+                                </form>
+                            </details>
+
+
+                            <details id="quality">
+                                <summary>Quality</summary>
+                                <form>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-0" name="code-score-0">
+                                        <label for="code-score-0"><strong>Score 0</strong>: Does not meet Score 1
+                                            criteria</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-1" name="code-score-1">
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
+                                            Source
+                                            software,
+                                            for distribution to the public at no charge.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-2" name="code-score-2">
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
+                                            discoverable
+                                            and
+                                            publicly accessible.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-3" name="code-score-3">
+                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
+                                            reproducible
+                                            way
+                                            using widely available standard tools.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-4" name="code-score-4">
+                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
+                                            project's
+                                            code is
+                                            available via a source code control system, in a way that allows any
+                                            released
+                                            version to
+                                            be recreated.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-5" name="code-score-5">
+                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
+                                            of code
+                                            is
+                                            established via the source code control system, in a reliable way based on
+                                            strong
+                                            authentication of the committer. When third-party contributions are
+                                            committed,
+                                            commit
+                                            messages provide reliable information about the code provenance.</label>
+                                    </div>
+
+                                </form>
+                            </details>
+
+
+                            <details id="community">
+                                <summary>Community</summary>
+                                <form>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-0" name="code-score-0">
+                                        <label for="code-score-0"><strong>Score 0</strong>: Does not meet Score 1
+                                            criteria</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-1" name="code-score-1">
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
+                                            Source
+                                            software,
+                                            for distribution to the public at no charge.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-2" name="code-score-2">
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
+                                            discoverable
+                                            and
+                                            publicly accessible.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-3" name="code-score-3">
+                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
+                                            reproducible
+                                            way
+                                            using widely available standard tools.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-4" name="code-score-4">
+                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
+                                            project's
+                                            code is
+                                            available via a source code control system, in a way that allows any
+                                            released
+                                            version to
+                                            be recreated.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-5" name="code-score-5">
+                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
+                                            of code
+                                            is
+                                            established via the source code control system, in a reliable way based on
+                                            strong
+                                            authentication of the committer. When third-party contributions are
+                                            committed,
+                                            commit
+                                            messages provide reliable information about the code provenance.</label>
+                                    </div>
+
+                                </form>
+                            </details>
+
+
+                            <details id="diversity-inclusion">
+                                <summary>Diversity & Inclusion</summary>
+                                <form>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-0" name="code-score-0">
+                                        <label for="code-score-0"><strong>Score 0</strong>: Does not meet Score 1
+                                            criteria</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-1" name="code-score-1">
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
+                                            Source
+                                            software,
+                                            for distribution to the public at no charge.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-2" name="code-score-2">
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
+                                            discoverable
+                                            and
+                                            publicly accessible.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-3" name="code-score-3">
+                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
+                                            reproducible
+                                            way
+                                            using widely available standard tools.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-4" name="code-score-4">
+                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
+                                            project's
+                                            code is
+                                            available via a source code control system, in a way that allows any
+                                            released
+                                            version to
+                                            be recreated.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-5" name="code-score-5">
+                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
+                                            of code
+                                            is
+                                            established via the source code control system, in a reliable way based on
+                                            strong
+                                            authentication of the committer. When third-party contributions are
+                                            committed,
+                                            commit
+                                            messages provide reliable information about the code provenance.</label>
+                                    </div>
+
+                                </form>
+                            </details>
+
+
+                            <details id="transparency-consensus-building">
+                                <summary>Transparency & Consensus Building</summary>
+                                <form>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-0" name="code-score-0">
+                                        <label for="code-score-0"><strong>Score 0</strong>: Does not meet Score 1
+                                            criteria</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-1" name="code-score-1">
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
+                                            Source
+                                            software,
+                                            for distribution to the public at no charge.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-2" name="code-score-2">
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
+                                            discoverable
+                                            and
+                                            publicly accessible.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-3" name="code-score-3">
+                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
+                                            reproducible
+                                            way
+                                            using widely available standard tools.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-4" name="code-score-4">
+                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
+                                            project's
+                                            code is
+                                            available via a source code control system, in a way that allows any
+                                            released
+                                            version to
+                                            be recreated.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-5" name="code-score-5">
+                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
+                                            of code
+                                            is
+                                            established via the source code control system, in a reliable way based on
+                                            strong
+                                            authentication of the committer. When third-party contributions are
+                                            committed,
+                                            commit
+                                            messages provide reliable information about the code provenance.</label>
+                                    </div>
+
+                                </form>
+                            </details>
+
+                            <details id="governance">
+                                <summary>Governance</summary>
+                                <form>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-0" name="code-score-0">
+                                        <label for="code-score-0"><strong>Score 0</strong>: Does not meet Score 1
+                                            criteria</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-1" name="code-score-1">
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
+                                            Source
+                                            software,
+                                            for distribution to the public at no charge.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-2" name="code-score-2">
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
+                                            discoverable
+                                            and
+                                            publicly accessible.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-3" name="code-score-3">
+                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
+                                            reproducible
+                                            way
+                                            using widely available standard tools.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-4" name="code-score-4">
+                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
+                                            project's
+                                            code is
+                                            available via a source code control system, in a way that allows any
+                                            released
+                                            version to
+                                            be recreated.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-5" name="code-score-5">
+                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
+                                            of code
+                                            is
+                                            established via the source code control system, in a reliable way based on
+                                            strong
+                                            authentication of the committer. When third-party contributions are
+                                            committed,
+                                            commit
+                                            messages provide reliable information about the code provenance.</label>
+                                    </div>
+
+                                </form>
+                            </details>
+
+                            <details id="user-friendliness">
+                                <summary>User Friendliness</summary>
+                                <form>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-0" name="code-score-0">
+                                        <label for="code-score-0"><strong>Score 0</strong>: Does not meet Score 1
+                                            criteria</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-1" name="code-score-1">
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
+                                            Source
+                                            software,
+                                            for distribution to the public at no charge.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-2" name="code-score-2">
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
+                                            discoverable
+                                            and
+                                            publicly accessible.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-3" name="code-score-3">
+                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
+                                            reproducible
+                                            way
+                                            using widely available standard tools.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-4" name="code-score-4">
+                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
+                                            project's
+                                            code is
+                                            available via a source code control system, in a way that allows any
+                                            released
+                                            version to
+                                            be recreated.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-5" name="code-score-5">
+                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
+                                            of code
+                                            is
+                                            established via the source code control system, in a reliable way based on
+                                            strong
+                                            authentication of the committer. When third-party contributions are
+                                            committed,
+                                            commit
+                                            messages provide reliable information about the code provenance.</label>
+                                    </div>
+
+                                </form>
+                            </details>
+
+                            <details id="open-source-sustainability">
+                                <summary>Open Source Sustainability</summary>
+                                <form>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-0" name="code-score-0">
+                                        <label for="code-score-0"><strong>Score 0</strong>: Does not meet Score 1
+                                            criteria</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-1" name="code-score-1">
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
+                                            Source
+                                            software,
+                                            for distribution to the public at no charge.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-2" name="code-score-2">
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
+                                            discoverable
+                                            and
+                                            publicly accessible.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-3" name="code-score-3">
+                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
+                                            reproducible
+                                            way
+                                            using widely available standard tools.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-4" name="code-score-4">
+                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
+                                            project's
+                                            code is
+                                            available via a source code control system, in a way that allows any
+                                            released
+                                            version to
+                                            be recreated.</label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="checkbox" id="code-score-5" name="code-score-5">
+                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
+                                            of code
+                                            is
+                                            established via the source code control system, in a reliable way based on
+                                            strong
+                                            authentication of the committer. When third-party contributions are
+                                            committed,
+                                            commit
+                                            messages provide reliable information about the code provenance.</label>
+                                    </div>
+
+                                </form>
+                            </details>
+
+                            <div class="d-flex justify-content-center align-items-center pt-3">
+                                <button class="back me-3" disabled>Back</button>
+                                <button class="next" data-bs-toggle="pill" data-bs-target="#pills-strategize"
+                                    type="button" role="tab" aria-controls="pills-strategize"
+                                    aria-selected="false">Next</button>
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-strategize" role="tabpanel"
+                        aria-labelledby="pills-strategize-tab">
+
+                        <section id="description-strategize" class="px-0 px-lg-5 pt-3">
+                            <h1 class="mb-3">Strategize</h1>
+
+                            <p><strong>Strategic Planning & SWOT Analysis</strong>:<br /><span
+                                    class="blue-text">(strengths, weaknesses,
+                                    opportunities, threats)</span>
+                            </p>
+
+                            <p class="mb-4">Answers to the following questions will help clarify the "big picture" for
+                                the
+                                project/tool team and assist in developing a capacity action plan that addresses the
+                                most urgent needs of the project. Talk through the questions for each section and note
+                                down your answers in the Notes box. For more open-ended questions, try to steer the
+                                conversation towards answers that will ultimately prove useful in designing your
+                                capacity action plan. (In other words, focus on the practicalities at stake.)</p>
+
+                            <a class="handbook" href="#" target="_blank" rel="noopener noreferrer">Handbook for External
+                                Evaluators (PDF)<br />
+                                <span class="description">If you are working with a Facilitator for this.</span>
+                            </a>
+
+                            <hr class="mt-4">
+                        </section>
+
+                        <section id="content-strategize" class="px-0 px-lg-5 pt-3">
+
+                            <ol type="1">
+                                <li><strong>What is the “strategic plan” for the project?</strong></li>
+                                <ol type="a">
+                                    <li>What organizational or business model is the project operating under?</li>
+                                    <ol type="i">
+                                        <li>Is the goal for the project to be self-sustaining as an openly developed
+                                            project maintained largely by volunteers? If not:</li>
+                                        <ol type="1">
+                                            <li>Which revenue models are available to build a revenue stream around the
+                                                project?</li>
+                                            <li>Are there alternatives (competitors) to the project? If so, are they
+                                                FLOSS or commercial?</li>
+                                            <li>Is the project potentially applicable to more than one industry? </li>
+                                        </ol>
+                                    </ol>
+                                    <li>Does the project have a roadmap? Who is responsible for setting the vision
+                                        and concrete direction of the project?</li>
+                                    <li>What are the project’s goals with regards to:</li>
+                                    <ol type="i">
+                                        <li>Technical capacity</li>
+                                        <li>Product features</li>
+                                        <li>Contributor community</li>
+                                        <li>User experience</li>
+                                        <li>Responsiveness to security issues</li>
+                                        <li>Other goals</li>
+                                    </ol>
+                                </ol>
+                                <textarea class="mt-3 mb-5" id="strategic-plan" name="strategic-plan" rows="3"
+                                    placeholder="Answer here..."></textarea>
+
+                                <li><strong>What obstacles or challenges is the project currently facing? How do they
+                                        interfere with the project’s goals as articulated in question 1?</strong></li>
+                                <textarea class="mt-3 mb-5" id="project-obstacles" name="project-obstacles" rows="3"
+                                    placeholder="Answer here..."></textarea>
+
+                                <li><strong>Are there obstacles or challenges the project anticipates facing in the
+                                        next year? Describe.</strong></li>
+                                <textarea class="mt-3 mb-5" id="project-challenges-next-year"
+                                    name="project-challenges-next-year" rows="3"
+                                    placeholder="Answer here..."></textarea>
+
+                                <li>
+                                    <strong>What are the project’s potential challenges (not an active challenge, but a
+                                        situation that could easily create problems)?</strong>
+
+                                    <p class="mb-0 description">E.g. – Low “bus factor” is a vulnerability, since if one
+                                        or more
+                                        maintainers are
+                                        out of commission for any reason, this would pose a huge challenge to the
+                                        project.</p>
+                                </li>
+                                <textarea class="mt-3 mb-5" id="project-potential-challenge"
+                                    name="project-potential-challenge" rows="3" placeholder="Answer here..."></textarea>
+
+                                <li><strong>What are the greatest strengths of the project as it currently
+                                        exists?</strong></li>
+                                <textarea class="mt-3 mb-5" id="project-strengths" name="project-strengths" rows="3"
+                                    placeholder="Answer here..."></textarea>
+
+                                <li><strong>What opportunities could the project capitalize on, given appropriate
+                                        resources?</strong></li>
+                                <textarea class="mt-3 mb-5" id="project-capitalize" name="project-capitalize" rows="3"
+                                    placeholder="Answer here..."></textarea>
+
+                                <li>
+                                    <strong>Which of the project’s activities currently require the most person-hours
+                                        (whether or not such time is actually devoted to the activity)?</strong>
+
+                                    <p class="mb-0 description">E.g. – Triaging bug reports and issue management might
+                                        require a lot of time, but at present the project doesn’t have the resources to
+                                        devote to it, so the queue continues to grow. Which activities of the project
+                                        could benefit from more person-hours than are currently available for that
+                                        activity? Could any of the project’s activities be made more efficient through
+                                        automation or better tooling, if the time/resources were available?</p>
+                                </li>
+                                <textarea class="mt-3 mb-5" id="project-hour-requirements"
+                                    name="project-hour-requirements" rows="3" placeholder="Answer here..."></textarea>
+
+                                <li><strong>What is the most important issue that the project needs to address?</strong>
+                                </li>
+                                <textarea class="mt-3 mb-5" id="project-issue-to-address"
+                                    name="project-issue-to-address" rows="3" placeholder="Answer here..."></textarea>
+
+                                <li><strong>What is the most urgent issue that the project needs to address?</strong>
+                                </li>
+                                <textarea class="mt-3 mb-5" id="project-urgent-issue" name="project-urgent-issue"
+                                    rows="3" placeholder="Answer here..."></textarea>
+
+                                <li>
+                                    <strong>With more person-hours devoted to it, which one or two activities of the
+                                        project would create the most positive impact over the next 6-12
+                                        months?</strong>
+
+                                    <p class="mb-0 description">Given the resources you already have at hand, plus any
+                                        potential resources coming available to you through external support (e.g. – a
+                                        grant you are about to receive, a Google Summer of Code student coming on)
+                                    </p>
+                                </li>
+                                <textarea class="mt-3 mb-5" id="project-activities" name="project-activities" rows="3"
+                                    placeholder="Answer here..."></textarea>
+
+                                <li><strong>What are 3 action-steps the project can take in the next 6-12 months to
+                                        meaningfully advance its strategic plan and address the key issues identified
+                                        above?</strong>
+                                </li>
+
+                                <div id="project-action-step-1" class="action-step mt-3" contenteditable="true">
+                                </div>
+
+                                <div id="project-action-step-2" class="action-step" contenteditable="true">
+                                </div>
+
+                                <div id="project-action-step-3" class="action-step" contenteditable="true">
+                                </div>
+
+                            </ol>
+
+                            <div class="d-flex justify-content-center align-items-center pt-3">
+                                <button class="back me-3" data-bs-toggle="pill" data-bs-target="#pills-assess"
+                                    type="button" role="tab" aria-controls="pills-assess"
+                                    aria-selected="false">Back</button>
+                                <button class="next" data-bs-toggle="pill" data-bs-target="#pills-review" type="button"
+                                    role="tab" aria-controls="pills-review" aria-selected="false">Next</button>
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
+                        TBA</div>
+
+                    <div class="tab-pane fade" id="pills-discuss" role="tabpanel" aria-labelledby="pills-discuss-tab">
+                        TBA</div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
