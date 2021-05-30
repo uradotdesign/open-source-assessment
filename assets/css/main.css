@@ -418,6 +418,15 @@ button.next:hover {
   z-index: -1;
 }
 
+@media (max-width: 992px) {
+  .nav-pills .nav-link:after {
+    display: none;
+  }
+  .nav-pills .nav-link {
+    padding: 5px 8px !important;
+  }
+}
+
 .last:after {
   content: "";
   width: 0 !important;
