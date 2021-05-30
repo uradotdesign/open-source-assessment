@@ -1,0 +1,11 @@
+.tab-content > .tab-pane {
+  display: block !important;
+}
+.fade:not(.show) {
+  opacity: 1 !important;
+}
+.navigation,
+nav,
+.finish-assessment {
+  display: none !important;
+}
