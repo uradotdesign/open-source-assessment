@@ -34,36 +34,37 @@
                         <img loading="lazy" src="assets/images/logo.svg" title="Open Source Assessment from Internews"
                             alt="Open Source Assessment logo" width="400px">
                     </a>
+                    <nav>
+                        <div class="nav-collapse">
+                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
 
-                    <div class="nav-collapse">
-                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-assess-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-assess" type="button" role="tab"
+                                        aria-controls="pills-assess" aria-selected="true">Assess</button>
+                                </li>
 
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-assess-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-assess" type="button" role="tab" aria-controls="pills-assess"
-                                    aria-selected="true">Assess</button>
-                            </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-strategize-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-strategize" type="button" role="tab"
+                                        aria-controls="pills-strategize" aria-selected="false">Strategize</button>
+                                </li>
 
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-strategize-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-strategize" type="button" role="tab"
-                                    aria-controls="pills-strategize" aria-selected="false">Strategize</button>
-                            </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-review-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-review" type="button" role="tab"
+                                        aria-controls="pills-review" aria-selected="false">Review</button>
+                                </li>
 
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-review-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-review" type="button" role="tab" aria-controls="pills-review"
-                                    aria-selected="false">Review</button>
-                            </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link last" id="pills-discuss-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-discuss" type="button" role="tab"
+                                        aria-controls="pills-discuss" aria-selected="false">Discuss</button>
+                                </li>
 
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link last" id="pills-discuss-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-discuss" type="button" role="tab"
-                                    aria-controls="pills-discuss" aria-selected="false">Discuss</button>
-                            </li>
-
-                        </ul>
-                    </div>
+                            </ul>
+                        </div>
+                    </nav>
 
                 </div>
             </header>
@@ -104,7 +105,7 @@
 
                             <details id="code" open>
                                 <summary>Code</summary>
-                                <form>
+                                <form id="code-form">
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-0" name="code-score-0">
@@ -184,7 +185,7 @@
 
                             <details id="licenses-copyright">
                                 <summary>Licenses & Copyright</summary>
-                                <form>
+                                <form id="license-form">
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-0" name="code-score-0">
@@ -194,51 +195,56 @@
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-1" name="code-score-1">
-                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
-                                            Source
-                                            software,
-                                            for distribution to the public at no charge.</label>
+                                        <label for="code-score-1"><strong>Score 1</strong>: The code is released under
+                                            an OSI- or FSF-approved license.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-2" name="code-score-2">
-                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
-                                            discoverable
-                                            and
-                                            publicly accessible.</label>
+                                        <label for="code-score-2"><strong>Score 2</strong>: Libraries that are mandatory
+                                            dependencies of the project's code do not create more restrictions than the
+                                            project license does. </label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-3" name="code-score-3">
-                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
-                                            reproducible
-                                            way
-                                            using widely available standard tools.</label>
+                                        <label for="code-score-3"><strong>Score 3</strong>: The libraries that are
+                                            mandatory dependencies of the project's code are available as Open Source
+                                            software. </label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-4" name="code-score-4">
-                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
-                                            project's
-                                            code is
-                                            available via a source code control system, in a way that allows any
-                                            released
-                                            version to
-                                            be recreated.</label>
+                                        <label for="code-score-4"><strong>Score 4</strong>: Committers are bound by an
+                                            Individual Contributor Agreement that defines which code they are allowed to
+                                            commit and how they need to identify code that is not their own. </label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-5" name="code-score-5">
-                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
-                                            of code
-                                            is
-                                            established via the source code control system, in a reliable way based on
-                                            strong
-                                            authentication of the committer. When third-party contributions are
-                                            committed,
-                                            commit
-                                            messages provide reliable information about the code provenance.</label>
+                                        <label for="code-score-5"><strong>Score 5</strong>: The copyright ownership of
+                                            everything that the project produces is clearly defined and documented.
+                                        </label>
                                     </div>
+
+                                    <p class="pt-4 item-header">Importance</p>
+
+                                    <input type="radio" id="importance-not-important" name="importance"
+                                        value="not-important">
+                                    <label for="importance-not-important">Not Important</label>
+
+                                    <input type="radio" id="importance-very-important" name="importance"
+                                        value="very-important">
+                                    <label for="importance-very-important">Very Important</label>
+
+                                    <input type="radio" id="importance-somewhat-important" name="importance"
+                                        value="somewhat-important">
+                                    <label for="importance-somewhat-important">Somewhat Important</label>
+
+                                    <p class="pt-4 item-header">Justification</p>
+
+                                    <textarea id="license-justification" name="license-justification" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
                                 </form>
                             </details>
@@ -246,7 +252,7 @@
 
                             <details id="releases">
                                 <summary>Releases</summary>
-                                <form>
+                                <form id="releases-form">
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-0" name="code-score-0">
@@ -256,51 +262,58 @@
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-1" name="code-score-1">
-                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
-                                            Source
-                                            software,
-                                            for distribution to the public at no charge.</label>
+                                        <label for="code-score-1"><strong>Score 1</strong>: Releases consist of source
+                                            code, distributed using standard and open archive formats that are expected
+                                            to stay readable in the long term.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-2" name="code-score-2">
-                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
-                                            discoverable
-                                            and
-                                            publicly accessible.</label>
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project maintains a
+                                            section of the website/homepage where all releases and release notes are
+                                            documented and archived.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-3" name="code-score-3">
-                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
-                                            reproducible
-                                            way
-                                            using widely available standard tools.</label>
+                                        <label for="code-score-3"><strong>Score 3</strong>: Releases are signed and/or
+                                            distributed along with digests that can be reliably used to validate the
+                                            downloaded archives.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-4" name="code-score-4">
-                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
-                                            project's
-                                            code is
-                                            available via a source code control system, in a way that allows any
-                                            released
-                                            version to
-                                            be recreated.</label>
+                                        <label for="code-score-4"><strong>Score 4</strong>: The release process is
+                                            documented to the extent that it could be handed off to a new release
+                                            manager.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-5" name="code-score-5">
-                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
-                                            of code
-                                            is
-                                            established via the source code control system, in a reliable way based on
-                                            strong
-                                            authentication of the committer. When third-party contributions are
-                                            committed,
-                                            commit
-                                            messages provide reliable information about the code provenance.</label>
+                                        <label for="code-score-5"><strong>Score 5</strong>: The release process is
+                                            documented and repeatable to the extent that someone new to the project is
+                                            able to independently generate the complete set of artifacts required for a
+                                            release.</label>
                                     </div>
+
+                                    <p class="pt-4 item-header">Importance</p>
+
+                                    <input type="radio" id="importance-not-important" name="importance"
+                                        value="not-important">
+                                    <label for="importance-not-important">Not Important</label>
+
+                                    <input type="radio" id="importance-very-important" name="importance"
+                                        value="very-important">
+                                    <label for="importance-very-important">Very Important</label>
+
+                                    <input type="radio" id="importance-somewhat-important" name="importance"
+                                        value="somewhat-important">
+                                    <label for="importance-somewhat-important">Somewhat Important</label>
+
+                                    <p class="pt-4 item-header">Justification</p>
+
+                                    <textarea id="releases-justification" name="releases-justification" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
                                 </form>
                             </details>
@@ -308,7 +321,7 @@
 
                             <details id="quality">
                                 <summary>Quality</summary>
-                                <form>
+                                <form id="quality-form">
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-0" name="code-score-0">
@@ -318,51 +331,57 @@
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-1" name="code-score-1">
-                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
-                                            Source
-                                            software,
-                                            for distribution to the public at no charge.</label>
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project is open and
+                                            honest about the quality of its code. Various levels of quality and maturity
+                                            for various modules are natural and acceptable as long as they are clearly
+                                            communicated.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-2" name="code-score-2">
-                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
-                                            discoverable
-                                            and
-                                            publicly accessible.</label>
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project puts a very high
+                                            priority on producing secure software.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-3" name="code-score-3">
-                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
-                                            reproducible
-                                            way
-                                            using widely available standard tools.</label>
+                                        <label for="code-score-3"><strong>Score 3</strong>: The project provides a
+                                            well-documented, secure and private channel to report security issues, along
+                                            with a documented way of responding to them.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-4" name="code-score-4">
-                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
-                                            project's
-                                            code is
-                                            available via a source code control system, in a way that allows any
-                                            released
-                                            version to
-                                            be recreated.</label>
+                                        <label for="code-score-4"><strong>Score 4</strong>: The project puts a high
+                                            priority on backwards compatibility and aims to document any incompatible
+                                            changes and provide tools and documentation to help users transition to new
+                                            features.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-5" name="code-score-5">
-                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
-                                            of code
-                                            is
-                                            established via the source code control system, in a reliable way based on
-                                            strong
-                                            authentication of the committer. When third-party contributions are
-                                            committed,
-                                            commit
-                                            messages provide reliable information about the code provenance.</label>
+                                        <label for="code-score-5"><strong>Score 5</strong>: The project strives to
+                                            respond to documented bug reports in a timely manner.</label>
                                     </div>
+
+                                    <p class="pt-4 item-header">Importance</p>
+
+                                    <input type="radio" id="importance-not-important" name="importance"
+                                        value="not-important">
+                                    <label for="importance-not-important">Not Important</label>
+
+                                    <input type="radio" id="importance-very-important" name="importance"
+                                        value="very-important">
+                                    <label for="importance-very-important">Very Important</label>
+
+                                    <input type="radio" id="importance-somewhat-important" name="importance"
+                                        value="somewhat-important">
+                                    <label for="importance-somewhat-important">Somewhat Important</label>
+
+                                    <p class="pt-4 item-header">Justification</p>
+
+                                    <textarea id="quality-justification" name="quality-justification" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
                                 </form>
                             </details>
@@ -370,7 +389,7 @@
 
                             <details id="community">
                                 <summary>Community</summary>
-                                <form>
+                                <form id="community-form">
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-0" name="code-score-0">
@@ -380,51 +399,65 @@
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-1" name="code-score-1">
-                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
-                                            Source
-                                            software,
-                                            for distribution to the public at no charge.</label>
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project has a homepage
+                                            that points to all the information required to participate in the community
+                                            and contribute to the project.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-2" name="code-score-2">
-                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
-                                            discoverable
-                                            and
-                                            publicly accessible.</label>
+                                        <label for="code-score-2"><strong>Score 2</strong>: The community welcomes
+                                            contributions from anyone who acts in good faith and in a respectful manner
+                                            and adds value to the project. New contributors receive welcoming
+                                            messages/comments and thanks for their contributions.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-3" name="code-score-3">
-                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
-                                            reproducible
-                                            way
-                                            using widely available standard tools.</label>
+                                        <label for="code-score-3"><strong>Score 3</strong>: Contributions include not
+                                            only source code, but also documentation, constructive bug reports,
+                                            constructive discussions, marketing and generally anything that adds value
+                                            to the project. Code reviews are undertaken with the goal of accepting as
+                                            many contributions as possible; comments on code contributions are
+                                            constructive and show appreciation.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-4" name="code-score-4">
-                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
-                                            project's
-                                            code is
-                                            available via a source code control system, in a way that allows any
-                                            released
-                                            version to
-                                            be recreated.</label>
+                                        <label for="code-score-4"><strong>Score 4</strong>: The community strives to be
+                                            meritocratic and over time aims to give more rights and responsibilities to
+                                            contributors who add value to the project. There is a defined and consistent
+                                            process for acknowledging contributions of all kinds. The project attempts
+                                            to make code reviews efficient and reduce the time between starting review
+                                            and accepting the contribution.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-5" name="code-score-5">
-                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
-                                            of code
-                                            is
-                                            established via the source code control system, in a reliable way based on
-                                            strong
-                                            authentication of the committer. When third-party contributions are
-                                            committed,
-                                            commit
-                                            messages provide reliable information about the code provenance.</label>
+                                        <label for="code-score-5"><strong>Score 5</strong>: The way in which
+                                            contributors can be granted more rights such as commit access or decision
+                                            power is clearly documented and is the same for all contributors. Most code
+                                            contributions of reasonable quality are accepted.</label>
                                     </div>
+
+                                    <p class="pt-4 item-header">Importance</p>
+
+                                    <input type="radio" id="importance-not-important" name="importance"
+                                        value="not-important">
+                                    <label for="importance-not-important">Not Important</label>
+
+                                    <input type="radio" id="importance-very-important" name="importance"
+                                        value="very-important">
+                                    <label for="importance-very-important">Very Important</label>
+
+                                    <input type="radio" id="importance-somewhat-important" name="importance"
+                                        value="somewhat-important">
+                                    <label for="importance-somewhat-important">Somewhat Important</label>
+
+                                    <p class="pt-4 item-header">Justification</p>
+
+                                    <textarea id="community-justification" name="community-justification" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
                                 </form>
                             </details>
@@ -432,7 +465,7 @@
 
                             <details id="diversity-inclusion">
                                 <summary>Diversity & Inclusion</summary>
-                                <form>
+                                <form id="diversity-form">
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-0" name="code-score-0">
@@ -442,51 +475,68 @@
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-1" name="code-score-1">
-                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
-                                            Source
-                                            software,
-                                            for distribution to the public at no charge.</label>
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project has a published
+                                            code of conduct that applies to all members of the community. The project
+                                            states publicly on its website and/or homepage(s) that it welcomes
+                                            contributions from all people and encourages an environment of friendliness
+                                            and respect.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-2" name="code-score-2">
-                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
-                                            discoverable
-                                            and
-                                            publicly accessible.</label>
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project has clear
+                                            processes in place for managing code of conduct reports, including a
+                                            conflict of interest policy and options for reporting to different
+                                            individuals. The project actively works to welcome new contributors and
+                                            uphold a friendly environment in its communications channels.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-3" name="code-score-3">
-                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
-                                            reproducible
-                                            way
-                                            using widely available standard tools.</label>
+                                        <label for="code-score-3"><strong>Score 3</strong>: The project has established
+                                            practices for welcoming new contributors and ensuring friendly and
+                                            respectful communications amongst the community. The project leadership
+                                            reflects some diversity of gender, ethnicity, and/or country of
+                                            origin.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-4" name="code-score-4">
-                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
-                                            project's
-                                            code is
-                                            available via a source code control system, in a way that allows any
-                                            released
-                                            version to
-                                            be recreated.</label>
+                                        <label for="code-score-4"><strong>Score 4</strong>: Project leadership works to
+                                            limit technical jargon and other language that could be off-putting to new
+                                            and diverse contributors. The project offers alternative modes of
+                                            communication (e.g. text alternatives to video) and captioning for spoken
+                                            communication. The community listens to feedback and is responsive to the
+                                            needs of diverse contributors.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-5" name="code-score-5">
-                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
-                                            of code
-                                            is
-                                            established via the source code control system, in a reliable way based on
-                                            strong
-                                            authentication of the committer. When third-party contributions are
-                                            committed,
-                                            commit
-                                            messages provide reliable information about the code provenance.</label>
+                                        <label for="code-score-5"><strong>Score 5</strong>: The project actively works
+                                            to mitigate unconscious bias in communications and decision-making.
+                                            Leadership actively works to recruit a diverse contributor community.
+                                            Individuals in leadership represent a variety of gender identities,
+                                            ethnicities, nationalities, abilities, etc.</label>
                                     </div>
+
+                                    <p class="pt-4 item-header">Importance</p>
+
+                                    <input type="radio" id="importance-not-important" name="importance"
+                                        value="not-important">
+                                    <label for="importance-not-important">Not Important</label>
+
+                                    <input type="radio" id="importance-very-important" name="importance"
+                                        value="very-important">
+                                    <label for="importance-very-important">Very Important</label>
+
+                                    <input type="radio" id="importance-somewhat-important" name="importance"
+                                        value="somewhat-important">
+                                    <label for="importance-somewhat-important">Somewhat Important</label>
+
+                                    <p class="pt-4 item-header">Justification</p>
+
+                                    <textarea id="diversity-justification" name="diversity-justification" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
                                 </form>
                             </details>
@@ -494,7 +544,7 @@
 
                             <details id="transparency-consensus-building">
                                 <summary>Transparency & Consensus Building</summary>
-                                <form>
+                                <form id="transparency-form">
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-0" name="code-score-0">
@@ -504,58 +554,64 @@
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-1" name="code-score-1">
-                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
-                                            Source
-                                            software,
-                                            for distribution to the public at no charge.</label>
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project maintains a
+                                            public list of its contributors who have decision power -- the project's
+                                            leadership consists of those contributors.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-2" name="code-score-2">
-                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
-                                            discoverable
-                                            and
-                                            publicly accessible.</label>
+                                        <label for="code-score-2"><strong>Score 2</strong>: Decisions are made by
+                                            consensus among project leaders and are documented on the project's main
+                                            communications channel. Community opinions are taken into account but the
+                                            leadership has the final word if needed.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-3" name="code-score-3">
-                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
-                                            reproducible
-                                            way
-                                            using widely available standard tools.</label>
+                                        <label for="code-score-3"><strong>Score 3</strong>: Documented voting rules are
+                                            used to build consensus when discussion is not sufficient.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-4" name="code-score-4">
-                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
-                                            project's
-                                            code is
-                                            available via a source code control system, in a way that allows any
-                                            released
-                                            version to
-                                            be recreated.</label>
+                                        <label for="code-score-4"><strong>Score 4</strong>: The project maintains a
+                                            public-facing roadmap that is kept up-to-date.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-5" name="code-score-5">
-                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
-                                            of code
-                                            is
-                                            established via the source code control system, in a reliable way based on
-                                            strong
-                                            authentication of the committer. When third-party contributions are
-                                            committed,
-                                            commit
-                                            messages provide reliable information about the code provenance.</label>
+                                        <label for="code-score-5"><strong>Score 5</strong>: All "important" discussions
+                                            happen asynchronously in written form on the project's main communications
+                                            channel. Offline, face-to-face or private discussions that affect the
+                                            project are also documented on that channel.</label>
                                     </div>
+
+                                    <p class="pt-4 item-header">Importance</p>
+
+                                    <input type="radio" id="importance-not-important" name="importance"
+                                        value="not-important">
+                                    <label for="importance-not-important">Not Important</label>
+
+                                    <input type="radio" id="importance-very-important" name="importance"
+                                        value="very-important">
+                                    <label for="importance-very-important">Very Important</label>
+
+                                    <input type="radio" id="importance-somewhat-important" name="importance"
+                                        value="somewhat-important">
+                                    <label for="importance-somewhat-important">Somewhat Important</label>
+
+                                    <p class="pt-4 item-header">Justification</p>
+
+                                    <textarea id="transparency-justification" name="transparency-justification" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
                                 </form>
                             </details>
 
                             <details id="governance">
                                 <summary>Governance</summary>
-                                <form>
+                                <form id="governance-form">
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-0" name="code-score-0">
@@ -565,58 +621,65 @@
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-1" name="code-score-1">
-                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
-                                            Source
-                                            software,
-                                            for distribution to the public at no charge.</label>
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project maintains a
+                                            public list of its leadership.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-2" name="code-score-2">
-                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
-                                            discoverable
-                                            and
-                                            publicly accessible.</label>
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project's leadership
+                                            roster clearly states the roles and responsibilities of each leader.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-3" name="code-score-3">
-                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
-                                            reproducible
-                                            way
-                                            using widely available standard tools.</label>
+                                        <label for="code-score-3"><strong>Score 3</strong>: There is documentation of
+                                            how decisions are made within the project and how conflicts are
+                                            resolved.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-4" name="code-score-4">
-                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
-                                            project's
-                                            code is
-                                            available via a source code control system, in a way that allows any
-                                            released
-                                            version to
-                                            be recreated.</label>
+                                        <label for="code-score-4"><strong>Score 4</strong>: The project has clear and
+                                            documented opportunities to move into leadership roles which are available
+                                            to all contributors. There is documentation of how leadership transitions
+                                            are to be managed. Key information for effective governance of the project
+                                            is managed such that there is no single point of failure.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-5" name="code-score-5">
-                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
-                                            of code
-                                            is
-                                            established via the source code control system, in a reliable way based on
-                                            strong
-                                            authentication of the committer. When third-party contributions are
-                                            committed,
-                                            commit
-                                            messages provide reliable information about the code provenance.</label>
+                                        <label for="code-score-5"><strong>Score 5</strong>: The project maintains an
+                                            active pipeline of potential new leaders for the project, including
+                                            succession planning and a clear outline of back-up support for all key
+                                            leadership roles.</label>
                                     </div>
+
+                                    <p class="pt-4 item-header">Importance</p>
+
+                                    <input type="radio" id="importance-not-important" name="importance"
+                                        value="not-important">
+                                    <label for="importance-not-important">Not Important</label>
+
+                                    <input type="radio" id="importance-very-important" name="importance"
+                                        value="very-important">
+                                    <label for="importance-very-important">Very Important</label>
+
+                                    <input type="radio" id="importance-somewhat-important" name="importance"
+                                        value="somewhat-important">
+                                    <label for="importance-somewhat-important">Somewhat Important</label>
+
+                                    <p class="pt-4 item-header">Justification</p>
+
+                                    <textarea id="governance-justification" name="governance-justification" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
                                 </form>
                             </details>
 
                             <details id="user-friendliness">
                                 <summary>User Friendliness</summary>
-                                <form>
+                                <form id="friendliness-form">
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-0" name="code-score-0">
@@ -626,58 +689,66 @@
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-1" name="code-score-1">
-                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
-                                            Source
-                                            software,
-                                            for distribution to the public at no charge.</label>
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project maintains a
+                                            user-facing website.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-2" name="code-score-2">
-                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
-                                            discoverable
-                                            and
-                                            publicly accessible.</label>
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project website includes
+                                            clear instructions for getting help (e.g. documentation, opening
+                                            issues).</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-3" name="code-score-3">
-                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
-                                            reproducible
-                                            way
-                                            using widely available standard tools.</label>
+                                        <label for="code-score-3"><strong>Score 3</strong>: The project itself contains
+                                            a "help" function for users to report errors and seek support, native to the
+                                            user interface of the project/app.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-4" name="code-score-4">
-                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
-                                            project's
-                                            code is
-                                            available via a source code control system, in a way that allows any
-                                            released
-                                            version to
-                                            be recreated.</label>
+                                        <label for="code-score-4"><strong>Score 4</strong>: The project has a defined
+                                            workflow for triaging user support requests and fixing bug reports. Users
+                                            are notified when their issues are resolved.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-5" name="code-score-5">
-                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
-                                            of code
-                                            is
-                                            established via the source code control system, in a reliable way based on
-                                            strong
-                                            authentication of the committer. When third-party contributions are
-                                            committed,
-                                            commit
-                                            messages provide reliable information about the code provenance.</label>
+                                        <label for="code-score-5"><strong>Score 5</strong>: The project strives to
+                                            answer user questions in a timely manner. The issue queue is actively
+                                            managed to reduce the age of open issues. The project utilizes user personas
+                                            to help drive the development of features and updates. User support features
+                                            may be available in multiple languages.</label>
                                     </div>
+
+                                    <p class="pt-4 item-header">Importance</p>
+
+                                    <input type="radio" id="importance-not-important" name="importance"
+                                        value="not-important">
+                                    <label for="importance-not-important">Not Important</label>
+
+                                    <input type="radio" id="importance-very-important" name="importance"
+                                        value="very-important">
+                                    <label for="importance-very-important">Very Important</label>
+
+                                    <input type="radio" id="importance-somewhat-important" name="importance"
+                                        value="somewhat-important">
+                                    <label for="importance-somewhat-important">Somewhat Important</label>
+
+                                    <p class="pt-4 item-header">Justification</p>
+
+                                    <textarea id="user-friendliness-justification"
+                                        name="user-friendliness-justification" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
                                 </form>
                             </details>
 
                             <details id="open-source-sustainability">
                                 <summary>Open Source Sustainability</summary>
-                                <form>
+                                <form id="sustainability-form">
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-0" name="code-score-0">
@@ -687,51 +758,60 @@
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-1" name="code-score-1">
-                                        <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
-                                            Source
-                                            software,
-                                            for distribution to the public at no charge.</label>
+                                        <label for="code-score-1"><strong>Score 1</strong>: The project has published
+                                            some code and there is at least one user of it.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-2" name="code-score-2">
-                                        <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
-                                            discoverable
-                                            and
-                                            publicly accessible.</label>
+                                        <label for="code-score-2"><strong>Score 2</strong>: The project has a small team
+                                            of developers, often working on a volunteer basis. There is limited insight
+                                            into who the users are and how they come across the project.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-3" name="code-score-3">
-                                        <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
-                                            reproducible
-                                            way
-                                            using widely available standard tools.</label>
+                                        <label for="code-score-3"><strong>Score 3</strong>: There are multiple
+                                            developers or development teams spread out at different institutions,
+                                            working on the same code. Some developers may have paid time to work on the
+                                            project. The project has developed feedback mechanisms that help to
+                                            illuminate who the users of the project are.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-4" name="code-score-4">
-                                        <label for="code-score-4"><strong>Score 4</strong>: The full history of the
-                                            project's
-                                            code is
-                                            available via a source code control system, in a way that allows any
-                                            released
-                                            version to
-                                            be recreated.</label>
+                                        <label for="code-score-4"><strong>Score 4</strong>: The project has a
+                                            self-governing developer community deliberately supporting a broad user
+                                            community. Funding opportunities to support the project have been identified
+                                            and pursued.</label>
                                     </div>
 
                                     <div class="form-group">
                                         <input type="checkbox" id="code-score-5" name="code-score-5">
-                                        <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
-                                            of code
-                                            is
-                                            established via the source code control system, in a reliable way based on
-                                            strong
-                                            authentication of the committer. When third-party contributions are
-                                            committed,
-                                            commit
-                                            messages provide reliable information about the code provenance.</label>
+                                        <label for="code-score-5"><strong>Score 5</strong>: The project is a
+                                            self-sustaining organization dedicated to supporting the user and developer
+                                            community (e.g. through commercial support, events, a software foundation,
+                                            grants, donations, etc.)</label>
                                     </div>
+
+                                    <p class="pt-4 item-header">Importance</p>
+
+                                    <input type="radio" id="importance-not-important" name="importance"
+                                        value="not-important">
+                                    <label for="importance-not-important">Not Important</label>
+
+                                    <input type="radio" id="importance-very-important" name="importance"
+                                        value="very-important">
+                                    <label for="importance-very-important">Very Important</label>
+
+                                    <input type="radio" id="importance-somewhat-important" name="importance"
+                                        value="somewhat-important">
+                                    <label for="importance-somewhat-important">Somewhat Important</label>
+
+                                    <p class="pt-4 item-header">Justification</p>
+
+                                    <textarea id="sustainability-justification" name="sustainability-justification"
+                                        rows="3" placeholder="Answer here..."></textarea>
 
                                 </form>
                             </details>
@@ -775,121 +855,142 @@
                         </section>
 
                         <section id="content-strategize" class="px-0 px-lg-5 pt-3">
-
-                            <ol type="1">
-                                <li><strong>What is the “strategic plan” for the project?</strong></li>
-                                <ol type="a">
-                                    <li>What organizational or business model is the project operating under?</li>
-                                    <ol type="i">
-                                        <li>Is the goal for the project to be self-sustaining as an openly developed
-                                            project maintained largely by volunteers? If not:</li>
-                                        <ol type="1">
-                                            <li>Which revenue models are available to build a revenue stream around the
-                                                project?</li>
-                                            <li>Are there alternatives (competitors) to the project? If so, are they
-                                                FLOSS or commercial?</li>
-                                            <li>Is the project potentially applicable to more than one industry? </li>
+                            <form id="strategize-form">
+                                <ol type="1">
+                                    <li><strong>What is the “strategic plan” for the project?</strong></li>
+                                    <ol type="a">
+                                        <li>What organizational or business model is the project operating under?</li>
+                                        <ol type="i">
+                                            <li>Is the goal for the project to be self-sustaining as an openly developed
+                                                project maintained largely by volunteers? If not:</li>
+                                            <ol type="1">
+                                                <li>Which revenue models are available to build a revenue stream around
+                                                    the
+                                                    project?</li>
+                                                <li>Are there alternatives (competitors) to the project? If so, are they
+                                                    FLOSS or commercial?</li>
+                                                <li>Is the project potentially applicable to more than one industry?
+                                                </li>
+                                            </ol>
+                                        </ol>
+                                        <li>Does the project have a roadmap? Who is responsible for setting the vision
+                                            and concrete direction of the project?</li>
+                                        <li>What are the project’s goals with regards to:</li>
+                                        <ol type="i">
+                                            <li>Technical capacity</li>
+                                            <li>Product features</li>
+                                            <li>Contributor community</li>
+                                            <li>User experience</li>
+                                            <li>Responsiveness to security issues</li>
+                                            <li>Other goals</li>
                                         </ol>
                                     </ol>
-                                    <li>Does the project have a roadmap? Who is responsible for setting the vision
-                                        and concrete direction of the project?</li>
-                                    <li>What are the project’s goals with regards to:</li>
-                                    <ol type="i">
-                                        <li>Technical capacity</li>
-                                        <li>Product features</li>
-                                        <li>Contributor community</li>
-                                        <li>User experience</li>
-                                        <li>Responsiveness to security issues</li>
-                                        <li>Other goals</li>
-                                    </ol>
-                                </ol>
-                                <textarea class="mt-3 mb-5" id="strategic-plan" name="strategic-plan" rows="3"
-                                    placeholder="Answer here..."></textarea>
+                                    <textarea class="mt-3 mb-5" id="strategic-plan" name="strategic-plan" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
-                                <li><strong>What obstacles or challenges is the project currently facing? How do they
-                                        interfere with the project’s goals as articulated in question 1?</strong></li>
-                                <textarea class="mt-3 mb-5" id="project-obstacles" name="project-obstacles" rows="3"
-                                    placeholder="Answer here..."></textarea>
+                                    <li><strong>What obstacles or challenges is the project currently facing? How do
+                                            they
+                                            interfere with the project’s goals as articulated in question 1?</strong>
+                                    </li>
+                                    <textarea class="mt-3 mb-5" id="project-obstacles" name="project-obstacles" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
-                                <li><strong>Are there obstacles or challenges the project anticipates facing in the
-                                        next year? Describe.</strong></li>
-                                <textarea class="mt-3 mb-5" id="project-challenges-next-year"
-                                    name="project-challenges-next-year" rows="3"
-                                    placeholder="Answer here..."></textarea>
+                                    <li><strong>Are there obstacles or challenges the project anticipates facing in the
+                                            next year? Describe.</strong></li>
+                                    <textarea class="mt-3 mb-5" id="project-challenges-next-year"
+                                        name="project-challenges-next-year" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
-                                <li>
-                                    <strong>What are the project’s potential challenges (not an active challenge, but a
-                                        situation that could easily create problems)?</strong>
+                                    <li>
+                                        <strong>What are the project’s potential challenges (not an active challenge,
+                                            but a
+                                            situation that could easily create problems)?</strong>
 
-                                    <p class="mb-0 description">E.g. – Low “bus factor” is a vulnerability, since if one
-                                        or more
-                                        maintainers are
-                                        out of commission for any reason, this would pose a huge challenge to the
-                                        project.</p>
-                                </li>
-                                <textarea class="mt-3 mb-5" id="project-potential-challenge"
-                                    name="project-potential-challenge" rows="3" placeholder="Answer here..."></textarea>
+                                        <p class="mb-0 description">E.g. – Low “bus factor” is a vulnerability, since if
+                                            one
+                                            or more
+                                            maintainers are
+                                            out of commission for any reason, this would pose a huge challenge to the
+                                            project.</p>
+                                    </li>
+                                    <textarea class="mt-3 mb-5" id="project-potential-challenge"
+                                        name="project-potential-challenge" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
-                                <li><strong>What are the greatest strengths of the project as it currently
-                                        exists?</strong></li>
-                                <textarea class="mt-3 mb-5" id="project-strengths" name="project-strengths" rows="3"
-                                    placeholder="Answer here..."></textarea>
+                                    <li><strong>What are the greatest strengths of the project as it currently
+                                            exists?</strong></li>
+                                    <textarea class="mt-3 mb-5" id="project-strengths" name="project-strengths" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
-                                <li><strong>What opportunities could the project capitalize on, given appropriate
-                                        resources?</strong></li>
-                                <textarea class="mt-3 mb-5" id="project-capitalize" name="project-capitalize" rows="3"
-                                    placeholder="Answer here..."></textarea>
+                                    <li><strong>What opportunities could the project capitalize on, given appropriate
+                                            resources?</strong></li>
+                                    <textarea class="mt-3 mb-5" id="project-capitalize" name="project-capitalize"
+                                        rows="3" placeholder="Answer here..."></textarea>
 
-                                <li>
-                                    <strong>Which of the project’s activities currently require the most person-hours
-                                        (whether or not such time is actually devoted to the activity)?</strong>
+                                    <li>
+                                        <strong>Which of the project’s activities currently require the most
+                                            person-hours
+                                            (whether or not such time is actually devoted to the activity)?</strong>
 
-                                    <p class="mb-0 description">E.g. – Triaging bug reports and issue management might
-                                        require a lot of time, but at present the project doesn’t have the resources to
-                                        devote to it, so the queue continues to grow. Which activities of the project
-                                        could benefit from more person-hours than are currently available for that
-                                        activity? Could any of the project’s activities be made more efficient through
-                                        automation or better tooling, if the time/resources were available?</p>
-                                </li>
-                                <textarea class="mt-3 mb-5" id="project-hour-requirements"
-                                    name="project-hour-requirements" rows="3" placeholder="Answer here..."></textarea>
+                                        <p class="mb-0 description">E.g. – Triaging bug reports and issue management
+                                            might
+                                            require a lot of time, but at present the project doesn’t have the resources
+                                            to
+                                            devote to it, so the queue continues to grow. Which activities of the
+                                            project
+                                            could benefit from more person-hours than are currently available for that
+                                            activity? Could any of the project’s activities be made more efficient
+                                            through
+                                            automation or better tooling, if the time/resources were available?</p>
+                                    </li>
+                                    <textarea class="mt-3 mb-5" id="project-hour-requirements"
+                                        name="project-hour-requirements" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
-                                <li><strong>What is the most important issue that the project needs to address?</strong>
-                                </li>
-                                <textarea class="mt-3 mb-5" id="project-issue-to-address"
-                                    name="project-issue-to-address" rows="3" placeholder="Answer here..."></textarea>
+                                    <li><strong>What is the most important issue that the project needs to
+                                            address?</strong>
+                                    </li>
+                                    <textarea class="mt-3 mb-5" id="project-issue-to-address"
+                                        name="project-issue-to-address" rows="3"
+                                        placeholder="Answer here..."></textarea>
 
-                                <li><strong>What is the most urgent issue that the project needs to address?</strong>
-                                </li>
-                                <textarea class="mt-3 mb-5" id="project-urgent-issue" name="project-urgent-issue"
-                                    rows="3" placeholder="Answer here..."></textarea>
+                                    <li><strong>What is the most urgent issue that the project needs to
+                                            address?</strong>
+                                    </li>
+                                    <textarea class="mt-3 mb-5" id="project-urgent-issue" name="project-urgent-issue"
+                                        rows="3" placeholder="Answer here..."></textarea>
 
-                                <li>
-                                    <strong>With more person-hours devoted to it, which one or two activities of the
-                                        project would create the most positive impact over the next 6-12
-                                        months?</strong>
+                                    <li>
+                                        <strong>With more person-hours devoted to it, which one or two activities of the
+                                            project would create the most positive impact over the next 6-12
+                                            months?</strong>
 
-                                    <p class="mb-0 description">Given the resources you already have at hand, plus any
-                                        potential resources coming available to you through external support (e.g. – a
-                                        grant you are about to receive, a Google Summer of Code student coming on)
-                                    </p>
-                                </li>
-                                <textarea class="mt-3 mb-5" id="project-activities" name="project-activities" rows="3"
-                                    placeholder="Answer here..."></textarea>
+                                        <p class="mb-0 description">Given the resources you already have at hand, plus
+                                            any
+                                            potential resources coming available to you through external support (e.g. –
+                                            a
+                                            grant you are about to receive, a Google Summer of Code student coming on)
+                                        </p>
+                                    </li>
+                                    <textarea class="mt-3 mb-5" id="project-activities" name="project-activities"
+                                        rows="3" placeholder="Answer here..."></textarea>
 
-                                <li><strong>What are 3 action-steps the project can take in the next 6-12 months to
-                                        meaningfully advance its strategic plan and address the key issues identified
-                                        above?</strong>
-                                </li>
+                                    <li><strong>What are 3 action-steps the project can take in the next 6-12 months to
+                                            meaningfully advance its strategic plan and address the key issues
+                                            identified
+                                            above?</strong>
+                                    </li>
 
-                                <div id="project-action-step-1" class="action-step mt-3" contenteditable="true">
-                                </div>
+                                    <div id="project-action-step-1" class="action-step mt-3" contenteditable="true">
+                                    </div>
 
-                                <div id="project-action-step-2" class="action-step" contenteditable="true">
-                                </div>
+                                    <div id="project-action-step-2" class="action-step" contenteditable="true">
+                                    </div>
 
-                                <div id="project-action-step-3" class="action-step" contenteditable="true">
-                                </div>
+                                    <div id="project-action-step-3" class="action-step" contenteditable="true">
+                                    </div>
+
+                            </form>
 
                             </ol>
 
@@ -910,12 +1011,14 @@
                         <section id="description-review" class="px-0 px-lg-5 pt-3">
                             <h1 class="mb-3">Review</h1>
 
-                            <p>These are the areas that you marked as either Somewhat Important or Very Important. Please check a maximum of five of the areas that you'd like to explore in more detail.
+                            <p>These are the areas that you marked as either Somewhat Important or Very Important.
+                                Please check a maximum of five of the areas that you'd like to explore in more detail.
                             </p>
 
                             <hr class="mt-4">
+
                         </section>
-                    
+
                     </div>
 
                     <div class="tab-pane fade" id="pills-discuss" role="tabpanel" aria-labelledby="pills-discuss-tab">
@@ -923,18 +1026,26 @@
                         <section id="description-discuss" class="px-0 px-lg-5 pt-3">
                             <h1 class="mb-3">Discuss</h1>
 
-                            <p>Talk through the questions for each section and note down your answers in the Notes box. For more open-ended questions, try to steer the conversation towards answers that will ultimately prove useful in designing your capacity action plan. (In other words, focus on the practicalities at stake.)  After discussing all of the questions for a section, re-assess your self-scoring for this area.
+                            <p>Talk through the questions for each section and note down your answers in the Notes box.
+                                For more open-ended questions, try to steer the conversation towards answers that will
+                                ultimately prove useful in designing your capacity action plan. (In other words, focus
+                                on the practicalities at stake.) After discussing all of the questions for a section,
+                                re-assess your self-scoring for this area.
                             </p>
 
-                            <p>Based on your conversation, do you want to revise your score? If so, go back to the "Assess" tab and update the score (and justification, if needed) for that area. It is in your interest to score each area as accurately as possible, so that you have a clear rationale for support in the areas where you most need help.</p>
+                            <p>Based on your conversation, do you want to revise your score? If so, go back to the
+                                "Assess" tab and update the score (and justification, if needed) for that area. It is in
+                                your interest to score each area as accurately as possible, so that you have a clear
+                                rationale for support in the areas where you most need help.</p>
 
-                            <a class="handbook" href="#" target="_blank" rel="noopener noreferrer">Working with a facilitator?<br />
+                            <a class="handbook" href="#" target="_blank" rel="noopener noreferrer">Working with a
+                                facilitator?<br />
                                 <span class="description">Click here for the facilitation guide</span>
                             </a>
 
                             <hr class="mt-4">
                         </section>
-                    
+
                     </div>
 
                 </div>
@@ -946,6 +1057,20 @@
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/savestorage.js"></script>
+    <script>
+        saveStorage('#code-form');
+        saveStorage('#license-form');
+        saveStorage('#releases-form');
+        saveStorage('#quality-form');
+        saveStorage('#community-form');
+        saveStorage('#diversity-form');
+        saveStorage('#transparency-form');
+        saveStorage('#governance-form');
+        saveStorage('#friendliness-form');
+        saveStorage('#sustainability-form');
+        saveStorage('#strategize-form');
+    </script>
 
 </body>
 

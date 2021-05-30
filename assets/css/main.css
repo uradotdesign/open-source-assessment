@@ -52,8 +52,7 @@ body {
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
   background-color: #f8f8f8;
-  counter-reset: steps;
-  counter-reset: counter;
+  counter-reset: counter steps;
 }
 
 .content {
@@ -160,7 +159,7 @@ details > summary {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  transition: color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 details > summary:hover {
