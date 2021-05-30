@@ -249,7 +249,6 @@
                                 </form>
                             </details>
 
-
                             <details id="releases">
                                 <summary>Releases</summary>
                                 <form id="releases-form">
@@ -318,7 +317,6 @@
                                 </form>
                             </details>
 
-
                             <details id="quality">
                                 <summary>Quality</summary>
                                 <form id="quality-form">
@@ -385,7 +383,6 @@
 
                                 </form>
                             </details>
-
 
                             <details id="community">
                                 <summary>Community</summary>
@@ -461,7 +458,6 @@
 
                                 </form>
                             </details>
-
 
                             <details id="diversity-inclusion">
                                 <summary>Diversity & Inclusion</summary>
@@ -540,7 +536,6 @@
 
                                 </form>
                             </details>
-
 
                             <details id="transparency-consensus-building">
                                 <summary>Transparency & Consensus Building</summary>
@@ -1074,12 +1069,457 @@
                                     <ul type="square">
                                         <li>What open source license does the tool use?</li>
                                         <li>What are the project software licenses?</li>
-                                        <li>Is the full history of the project's code available?</li>
-                                        <li>What tools are required to build the source code, and are these tools widely
-                                            available?</li>
+                                        <ul>
+                                            <li>Who has permission to run the software?</li>
+                                            <li>Who is permitted to examine the human-readable source code of the
+                                                software?</li>
+                                            <li>Who is permitted to adapt or modify the source code of the software?
+                                            </li>
+                                            <li>Who is permitted to redistribute the modified or unmodified source code
+                                                of the software?</li>
+                                        </ul>
+                                        <li>Is the license recognized as a common Free and Open Source license?</li>
+                                        <li>How much of the code base has declared licenses?</li>
+                                        <li>Are all project dependencies clearly documented and license compatibilities
+                                            audited?</li>
+                                        <li>How many different licenses are there?</li>
+                                        <li>Are there license conflicts?</li>
+                                        <li>Is the licensee required to make modified or unmodified source code
+                                            available if they redistribute the code?</li>
+                                        <li>Are contributors required to sign a document stating they have the necessary
+                                            permissions to make their contributions? </li>
+                                        <li>Does the project have a standard expression of dependencies, licensing, and
+                                            security-related issues?</li>
+                                        <li>What methods (tooling) were used to identify project licenses?</li>
                                     </ul>
 
-                                    <textarea id="license-justification" name="license-justification" rows="3"
+                                    <textarea id="license-notes" name="license-notes" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                </form>
+                            </details>
+
+                            <details id="releases-discussion">
+                                <summary>Releases</summary>
+                                <form id="releases-discuss">
+
+                                    <p class="item-header">Assessment Areas and Guiding Questions</p>
+
+                                    <ul type="square">
+                                        <li>Is the software release cycle (including snapshots and major releases)
+                                            consistent and predictable?</li>
+                                        <li>Does the project use release candidates and solicit feedback on them?</li>
+                                        <li>Where are release notes and notifications published?</li>
+                                    </ul>
+
+                                    <textarea id="releases-notes" name="releases-notes" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <p class="pt-4 item-header">Does the project have a formal role or procedure for who
+                                        manages releases?</p>
+
+                                    <textarea id="releases-answer-1" name="releases-answer-1" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Who is responsible for the creation of release notes,
+                                        and what is their process for doing so?
+                                    </p>
+
+                                    <textarea id="releases-answer-2" name="releases-answer-2" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                </form>
+                            </details>
+
+                            <details id="quality-discussion">
+                                <summary>Quality</summary>
+                                <form id="quality-discuss">
+
+                                    <p class="item-header">Assessment Areas and Guiding Questions</p>
+
+                                    <ul type="square">
+                                        <li>Does the project have a documented process for responding to reported
+                                            security issues?</li>
+                                        <li>Does the software have a security certification?</li>
+                                        <li>How does the project manage reporting of security issues/bugs?</li>
+                                        <li>What is the total number of reported bugs?</li>
+                                        <li>What is the average age of reported bugs?</li>
+                                        <li>What is the approximate ratio of open bugs that are defects vs. feature
+                                            requests?</li>
+                                        <li>What language is the project written in?</li>
+                                        <li>What are the documented community processes associated with the development
+                                            of the source code?</li>
+                                        <li>Does the project document when changes are not backwards-compatible? What
+                                            tools and documentation does the project provide to help users when such
+                                            changes are made?</li>
+                                    </ul>
+
+                                    <textarea id="quality-notes" name="quality-notes" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <p class="pt-4 item-header">What percentage of the code has test coverage?</p>
+
+                                    <textarea id="quality-answer-1" name="quality-answer-1" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Has the project gone through an external review or
+                                        audit?</p>
+
+                                    <textarea id="quality-answer-2" name="quality-answer-2" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Does the project use continuous integration testing?</p>
+
+                                    <textarea id="quality-answer-3" name="quality-answer-3" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Does the project have an internal standard or goal for
+                                        responding to bug reports in a timely fashion?</p>
+
+                                    <textarea id="quality-answer-4" name="quality-answer-4" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Is the project able to easily import upstream security
+                                        patches to their dependencies?</p>
+
+                                    <textarea id="quality-answer-5" name="quality-answer-5" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">What level of training does a person need in order to
+                                        read, understand, and propose modifications to the source code? </p>
+
+                                    <textarea id="quality-answer-6" name="quality-answer-6" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                </form>
+                            </details>
+
+                            <details id="community-discussion">
+                                <summary>Community</summary>
+                                <form id="community-discuss">
+
+                                    <p class="item-header">Assessment Areas and Guiding Questions</p>
+
+                                    <ul type="square">
+                                        <li>When did development of this tool first begin?</li>
+                                        <li>Approximately how many regular contributors are there?</li>
+                                        <li>Are the maintainers primarily volunteers, or are they employed by an
+                                            organization or company specifically to work on the tool?</li>
+                                        <li>Is there publicly accessible and easy to find documentation about how to
+                                            participate in the project?</li>
+                                        <li>Is the process for contributors being granted increasing rights and
+                                            responsibilities clearly documented and publicly available?</li>
+                                        <li>Is it easy to acquire, build, configure and install the source code from
+                                            scratch?</li>
+                                        <li>What activity is there within the community? (e.g. mailing list traffic,
+                                            pull request discussion, chat group activity)</li>
+                                        <li>How are new contributors welcomed as part of the workflow of their
+                                            contribution(s)? On the mailing list/communications channels?</li>
+                                        <li>How does the project advertise that non-code contributions are welcome?</li>
+                                        <li>How does the project acknowledge and thank people for their contributions?
+                                        </li>
+                                    </ul>
+
+                                    <textarea id="community-notes" name="community-notes" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <p class="pt-4 item-header">What procedures are in place for managing efficient and
+                                        friendly code reviews?</p>
+
+                                    <textarea id="community-answer-1" name="community-answer-1" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">What efforts do the project leaders make to recruit and
+                                        retain new contributors?</p>
+
+                                    <textarea id="community-answer-2" name="community-answer-2" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">How does the project monitor and measure whether the
+                                        community is growing, retaining, and upskilling/advancing contributors?</p>
+
+                                    <textarea id="community-answer-3" name="community-answer-3" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                </form>
+                            </details>
+
+                            <details id="diversity-inclusion-discussion">
+                                <summary>Diversity & Inclusion</summary>
+                                <form id="diversity-discuss">
+
+                                    <p class="item-header">Assessment Areas and Guiding Questions</p>
+
+                                    <ul type="square">
+                                        <li>Does the project have a Code of Conduct?</li>
+                                        <li>Does the project maintain conflict-of-interest policies and reporting lines
+                                            for the Code of Conduct?</li>
+                                    </ul>
+
+                                    <textarea id="diversity-notes" name="diversity-notes" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <p class="pt-4 item-header">Does the project have established procedures for
+                                        responding to Code of Conduct reports?</p>
+
+                                    <textarea id="diversity-answer-1" name="diversity-answer-1" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Who plays the role of community manager for the project?
+                                    </p>
+
+                                    <textarea id="diversity-answer-2" name="diversity-answer-2" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Does the project work to ensure that code contributions
+                                        are not seen as more valuable than other forms of contribution (e.g. -
+                                        documentation, marketing, bug reports, community management)? How?</p>
+
+                                    <textarea id="diversity-answer-3" name="diversity-answer-3" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">How does the project approach trying to include people
+                                        with disabilities? People whose first language is not that of the project
+                                        community?</p>
+
+                                    <textarea id="diversity-answer-4" name="diversity-answer-4" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">How diverse is the project leadership? Is diversity a
+                                        factor taken into consideration when doing succession planning?</p>
+
+                                    <textarea id="diversity-answer-5" name="diversity-answer-5" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Does the project leadership communicate the importance
+                                        of inclusivity, respect, and fairness to the community? How?</p>
+
+                                    <textarea id="diversity-answer-6" name="diversity-answer-6" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">How does the project approach recruiting new
+                                        contributors?</p>
+
+                                    <textarea id="diversity-answer-7" name="diversity-answer-7" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                </form>
+                            </details>
+
+                            <details id="transparency-consensus-building-discussion">
+                                <summary>Transparency & Consensus Building</summary>
+                                <form id="transparency-discuss">
+
+                                    <p class="item-header">Assessment Areas and Guiding Questions</p>
+
+                                    <ul type="square">
+                                        <li>Is any of the project knowledge available in more than one language?</li>
+                                        <li>Are there public archives of the knowledge?</li>
+                                        <li>Are there documented data recovery processes in place?</li>
+                                        <li>Are there documentation sources external to the project?</li>
+                                        <li>How good is the developer-specific public documentation?</li>
+                                        <li>Is the knowledge stored in publicly published data formats (with appropriate
+                                            metadata) that will make it accessible over time?</li>
+                                        <li>Is there any financial, legal, or technical barrier to accessing or
+                                            acquiring some or all knowledge in the project?</li>
+                                    </ul>
+
+                                    <textarea id="transparency-notes" name="transparency-notes" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <p class="pt-4 item-header">How are project decisions made?</p>
+
+                                    <textarea id="transparency-answer-1" name="transparency-answer-1" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">How is project knowledge managed in case a key person
+                                        becomes unavailable? (i.e. – API keys, PGP/signing keys, passwords to the repo
+                                        and/or user accounts)</p>
+
+                                    <textarea id="transparency-answer-2" name="transparency-answer-2" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Does the project discourage major project communications
+                                        outside the approved channels?</p>
+
+                                    <textarea id="transparency-answer-3" name="transparency-answer-3" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Who is able to access all the (non-private) project
+                                        knowledge?</p>
+
+                                    <textarea id="transparency-answer-4" name="transparency-answer-4" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Who is able to contribute to the project knowledge?</p>
+
+                                    <textarea id="transparency-answer-5" name="transparency-answer-5" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                </form>
+                            </details>
+
+                            <details id="governance-discussion">
+                                <summary>Governance</summary>
+                                <form id="governance-discuss">
+
+                                    <p class="item-header">Assessment Areas and Guiding Questions</p>
+
+                                    <ul type="square">
+                                        <li>Approximately how many maintainers are there for this tool, and how much
+                                            time do they devote to its development?</li>
+                                        <li>Has this tool team ever *applied* for funding before?</li>
+                                        <li>Has this tool team ever *received* funding before?</li>
+                                        <li>Is there clear leadership in the project?</li>
+                                        <li>Are the structure and policies of the project clearly and publicly
+                                            documented?</li>
+                                        <li>Are there publicly accessible behavioral guidelines for the project?</li>
+                                        <li>Is there an avenue and structure for recourse beyond the project
+                                            maintainers?</li>
+                                    </ul>
+
+                                    <textarea id="governance-notes" name="governance-notes" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <p class="pt-4 item-header">Is the project leadership elected by the project
+                                        community?</p>
+
+                                    <textarea id="governance-answer-1" name="governance-answer-1" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <p class="pt-4 item-header">Who is able to contribute to the project development?
+                                    </p>
+
+                                    <textarea id="governance-answer-2" name="governance-answer-2" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <p class="pt-4 item-header">Who is able to obtain commit rights to the project
+                                        development?</p>
+
+                                    <textarea id="governance-answer-3" name="governance-answer-3" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <p class="pt-4 item-header">How does the project approach succession planning and
+                                        developing a pipeline of new potential leaders?</p>
+
+                                    <textarea id="governance-answer-4" name="governance-answer-4" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <p class="pt-4 item-header">Is there a single point of failure or control for
+                                        committing changes to the primary project source?</p>
+
+                                    <textarea id="governance-answer-5" name="governance-answer-5" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <p class="pt-4 item-header">Does the actual practice of project governance reflect
+                                        the documentation describing governance procedures?</p>
+
+                                    <textarea id="governance-answer-6" name="governance-answer-6" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                </form>
+                            </details>
+
+                            <details id="user-friendliness-discussion">
+                                <summary>User Friendliness</summary>
+                                <form id="friendliness-discuss">
+
+                                    <p class="item-header">Assessment Areas and Guiding Questions</p>
+
+                                    <ul type="square">
+                                        <li>What information do you have about the community of users of this tool?</li>
+                                        <li>Is the software easy for users to access, install and run so it can be
+                                            trialled (for those who have access)?</li>
+                                        <li>Is the project and its associated user support features and documentation
+                                            available in more than one language?</li>
+                                        <li>How long do users generally have to wait before their issue is resolved?
+                                        </li>
+                                        <li>How good is the user-specific public documentation?</li>
+                                        <li>Who is able to obtain easy access to and use the software?</li>
+                                    </ul>
+
+                                    <textarea id="user-friendliness-notes" name="user-friendliness-notes" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <p class="pt-4 item-header">What is the project's approach to triaging and managing
+                                        the issue queue?</p>
+
+                                    <textarea id="user-friendliness-answer-1" name="user-friendliness-answer-1" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Who are your users? How do you find out about the
+                                        general populations that are using the project?</p>
+
+                                    <textarea id="user-friendliness-answer-2" name="user-friendliness-answer-2" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">What are the potential challenges you are aware of that
+                                        your more vulnerable users may be facing? Do these challenges influence
+                                        development of the project? How?</p>
+
+                                    <textarea id="user-friendliness-answer-3" name="user-friendliness-answer-3" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">Are there user personas used to guide project
+                                        development? If so, how were the personas developed?</p>
+
+                                    <textarea id="user-friendliness-answer-4" name="user-friendliness-answer-4" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                </form>
+                            </details>
+
+                            <details id="open-source-sustainability-discussion">
+                                <summary>Open Source Sustainability</summary>
+                                <form id="sustainability-discussion">
+
+                                    <p class="item-header">Assessment Areas and Guiding Questions</p>
+
+                                    <ul type="square">
+                                        <li>What information do you have about the community of users of this tool?</li>
+                                        <li>Approximately how many regular contributors are there? </li>
+                                        <li>Approximately how many maintainers are there for this tool, and how much
+                                            time do they devote to its development?</li>
+                                        <li>Are the maintainers primarily volunteers, or are they employed by an
+                                            organization or company specifically to work on the tool?</li>
+                                        <li>Has this tool team ever *applied* for funding before?</li>
+                                        <li>Has this tool team ever *received* funding before?</li>
+                                        <li>How many contributors have some or all of the time they spend on the
+                                            software paid for? </li>
+                                        <li>How many dependencies does the project have? What are they?</li>
+                                    </ul>
+
+                                    <textarea id="sustainability-notes" name="sustainability-notes" rows="3"
+                                        placeholder="Notes"></textarea>
+
+                                    <h3 class="pt-4">For larger projects:</h3>
+
+                                    <p class="item-header">What proportion of the core developers are from the same
+                                        company, institution or department?</p>
+
+                                    <textarea id="sustainability-answer-1" name="sustainability-answer-1" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <p class="pt-4 item-header">What proportion of the core developers are from the same
+                                        company, institution or department? </p>
+
+                                    <textarea id="sustainability-answer-2" name="sustainability-answer-2" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <h3 class="pt-4">For small projects:</h3>
+
+                                    <p class="item-header">How did the project come to be? How did the core developers
+                                        meet?</p>
+
+                                    <textarea id="sustainability-answer-3" name="sustainability-answer-3" rows="3"
+                                        placeholder="Answer here..."></textarea>
+
+                                    <h3 class="pt-4">For ALL projects:</h3>
+
+                                    <p class="item-header">What opportunities does the project have to bring in needed
+                                        resources?</p>
+
+                                    <textarea id="sustainability-answer-4" name="sustainability-answer-4" rows="3"
                                         placeholder="Answer here..."></textarea>
 
                                 </form>
