@@ -262,12 +262,8 @@ details[open] > *:not(summary) {
   color: #005cab;
 }
 
-input[type="checkbox"] {
-  margin-right: 10px;
-}
-
 label {
-  margin-right: 15px;
+  margin-left: 10px;
 }
 
 textarea {
@@ -418,15 +414,6 @@ button.next:hover {
   z-index: -1;
 }
 
-@media (max-width: 992px) {
-  .nav-pills .nav-link:after {
-    display: none;
-  }
-  .nav-pills .nav-link {
-    padding: 5px 8px !important;
-  }
-}
-
 .last:after {
   content: "";
   width: 0 !important;
@@ -475,6 +462,16 @@ button.next:hover {
   display: none;
 }
 
+.checkbox-limit {
+  margin-right: 10px;
+}
+
+dl,
+ol,
+ul {
+  padding-left: 1rem;
+}
+
 .big-checkmark {
   font-size: 8rem;
   color: #0d5cab;
@@ -491,5 +488,17 @@ button.next:hover {
   nav,
   .finish-assessment {
     display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-pills .nav-link:after {
+    display: none;
+  }
+  .nav-pills .nav-link {
+    padding: 5px 8px !important;
+  }
+  label {
+    display: block;
   }
 }
