@@ -5,111 +5,120 @@
  * Author: Sarkhan Rajabov
  **/
 
-function saveStorage(selector, options){
-    'use strict';
+function saveStorage(selector, options) {
+  "use strict";
 
-    if(typeof Storage !== "undefined"){
+  if (typeof Storage !== "undefined") {
+    let forms = document.querySelectorAll(selector);
 
-        let form     = document.querySelector(selector),
-            key 	 = form.getAttribute('id') + '_saveStorage',
-            elements = form.querySelectorAll('input, textarea, select'),
-            defaults = {
-                exclude: [],
-            };
+    let initApp = function (key, excludeInputType) {
+      if (localStorage.getItem(key) !== null) {
+        let data = JSON.parse(localStorage.getItem(key));
 
-        let extend = function(out) {
-            out = out || {};
+        data.forEach(function (v) {
+          forms.forEach((form) => {
+            if (v.type !== "radio" && v.type !== "checkbox") {
+              if (form.querySelector("[name=" + v.name + "]")) {
+                let input = form.querySelector(
+                  "[name=" + v.name + "]" + excludeInputType()
+                );
 
-            for (let i = 1; i < arguments.length; i++) {
-                if (!arguments[i])
-                    continue;
-
-                for (let key in arguments[i]) {
-                    if (arguments[i].hasOwnProperty(key))
-                        out[key] = arguments[i][key];
+                if (input !== null) {
+                  input.value = v.value;
                 }
+              }
+            } else {
+              let input = form.querySelectorAll("[name=" + v.name + "]");
+
+              input.forEach(function (el) {
+                if (el.name === v.name && el.value === v.value) {
+                  el.checked = true;
+                }
+              });
             }
+          });
+        });
+      }
+    };
 
-            return out;
+    forms.forEach((form) => {
+      let key = form.getAttribute("data-storage-name") + "_saveStorage",
+        elements = form.querySelectorAll("input, textarea, select"),
+        defaults = {
+          exclude: [],
         };
 
-        let opts = extend({}, defaults, options);
+      let extend = function (out) {
+        out = out || {};
 
-        let excludeInputType = function(){
-            let inputType = '';
+        for (let i = 1; i < arguments.length; i++) {
+          if (!arguments[i]) continue;
 
-            opts.exclude.forEach(function(type){
-                inputType += ':not([type='+type+'])';
-            });
+          for (let key in arguments[i]) {
+            if (arguments[i].hasOwnProperty(key)) out[key] = arguments[i][key];
+          }
+        }
 
-            return inputType;
-        };
+        return out;
+      };
 
-        let serializeArray = function(){
-            let serializeData = [];
+      let opts = extend({}, defaults, options);
 
-            elements.forEach(function(el){
-                if(el.type !== 'radio' && el.type !== 'checkbox'){
-                    serializeData.push({name: el.name, value: el.value, type: el.type});
-                }
-                else if(el.checked){
-                    serializeData.push({name: el.name, value: el.value, type: el.type});
-                }
-            });
+      let excludeInputType = function () {
+        let inputType = "";
 
-            return serializeData;
-        };
-
-        let setLocalStorage = function(){
-            let formData = JSON.stringify(serializeArray());
-            localStorage.setItem(key, formData);
-        };
-
-        let initApp = function(){
-            if(localStorage.getItem(key) !== null){
-
-                let data = JSON.parse(localStorage.getItem(key));
-
-                data.forEach(function(v){
-                    if(v.type !== 'radio' && v.type !== 'checkbox'){
-                        if(form.querySelector('[name='+v.name+']')){
-                            let input = form.querySelector('[name='+v.name+']' + excludeInputType());
-
-                            if(input !== null){
-                                input.value = v.value;
-                            }
-                        }
-                    }
-                    else {
-                        let input = form.querySelectorAll('[name='+v.name+']');
-
-                        input.forEach(function(el){
-                            if(el.name === v.name && el.value === v.value){
-                                el.checked = true;
-                            }
-                        })
-                    }
-                });
-            }
-        };
-
-        form.addEventListener('change', function(){
-            setLocalStorage();
+        opts.exclude.forEach(function (type) {
+          inputType += ":not([type=" + type + "])";
         });
 
-        elements.forEach(function(el){
-            el.addEventListener('keyup', function(){
-                setLocalStorage();
+        return inputType;
+      };
+
+      let serializeArray = function () {
+        let serializeData = [];
+
+        elements.forEach(function (el) {
+          if (el.type !== "radio" && el.type !== "checkbox") {
+            serializeData.push({
+              name: el.name,
+              value: el.value,
+              type: el.type,
             });
+          } else if (el.checked) {
+            serializeData.push({
+              name: el.name,
+              value: el.value,
+              type: el.type,
+            });
+          }
         });
 
-        form.addEventListener('submit', function () {
-            localStorage.removeItem(key);
-        });
+        return serializeData;
+      };
 
-        initApp();
-    }
-    else {
-        console.error('Sorry! No web storage support.');
-    }
+      let setLocalStorage = function () {
+        let formData = JSON.stringify(serializeArray());
+        localStorage.setItem(key, formData);
+        initApp(key, excludeInputType);
+      };
+
+      form.addEventListener("change", function () {
+        setLocalStorage();
+      });
+
+      elements.forEach(function (el) {
+        el.addEventListener("keyup", function () {
+          setLocalStorage();
+        });
+      });
+
+      form.addEventListener("submit", function () {
+        localStorage.removeItem(key);
+      });
+
+      initApp(key, excludeInputType);
+    });
+  } else {
+    console.error("Sorry! No web storage support.");
+  }
 }
