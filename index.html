@@ -1012,6 +1012,14 @@
 
                             <hr class="mt-4">
 
+                            <div class="d-flex justify-content-center align-items-center pt-3">
+                                <button class="back me-3" data-bs-toggle="pill" data-bs-target="#pills-strategize"
+                                    type="button" role="tab" aria-controls="pills-strategize"
+                                    aria-selected="false">Back</button>
+                                <button class="next" data-bs-toggle="pill" data-bs-target="#pills-discuss" type="button"
+                                    role="tab" aria-controls="pills-discuss" aria-selected="false">Next</button>
+                            </div>
+
                         </section>
 
                     </div>
@@ -1062,7 +1070,7 @@
 
                             <details id="licenses-copyright-discussion">
                                 <summary>Licenses & Copyright</summary>
-                                <form id="license-discussion">
+                                <form id="license-discuss">
 
                                     <p class="item-header">Assessment Areas and Guiding Questions</p>
 
@@ -1471,7 +1479,7 @@
 
                             <details id="open-source-sustainability-discussion">
                                 <summary>Open Source Sustainability</summary>
-                                <form id="sustainability-discussion">
+                                <form id="sustainability-discuss">
 
                                     <p class="item-header">Assessment Areas and Guiding Questions</p>
 
@@ -1525,6 +1533,13 @@
                                 </form>
                             </details>
 
+                            <div class="d-flex justify-content-center align-items-center pt-3">
+                                <button class="back me-3" data-bs-toggle="pill" data-bs-target="#pills-review"
+                                    type="button" role="tab" aria-controls="pills-reviews"
+                                    aria-selected="false">Back</button>
+                                <button class="next" type="button">Finish</button>
+                            </div>
+
                         </section>
 
                     </div>
@@ -1551,6 +1566,16 @@
         saveStorage('#friendliness-form');
         saveStorage('#sustainability-form');
         saveStorage('#strategize-form');
+        saveStorage('#code-discuss');
+        saveStorage('#license-discuss');
+        saveStorage('#releases-discuss');
+        saveStorage('#quality-discuss');
+        saveStorage('#community-discuss');
+        saveStorage('#diversity-discuss');
+        saveStorage('#transparency-discuss');
+        saveStorage('#governance-discuss');
+        saveStorage('#friendliness-discuss');
+        saveStorage('#sustainability-discuss');
     </script>
 
 </body>
