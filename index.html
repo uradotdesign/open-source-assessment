@@ -34,7 +34,7 @@
                         <img loading="lazy" src="assets/images/logo.svg" title="Open Source Assessment from Internews"
                             alt="Open Source Assessment logo" width="400px">
                     </a>
-                    <nav>
+                    <nav id="stepper">
                         <div class="nav-collapse">
                             <ul class="nav nav-pills" id="pills-tab" role="tablist">
 
@@ -2573,6 +2573,8 @@
             function toggleDisplay(id) {
                 var el = document.getElementById(id);
                 var last_step = document.getElementById('description-discuss');
+                var nav = document.getElementById('stepper');
+                nav.style.display = "none";
                 last_step.style.display = "none";
                 el.style.display = "block";
             }
