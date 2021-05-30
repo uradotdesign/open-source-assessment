@@ -1594,6 +1594,23 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/savestorage.js"></script>
+    <script src="assets/js/html2pdf.bundle.min.js"></script>
+
+    <script>
+        var element = document.getElementById('main');
+        var opt = {
+            margin: 0,
+            pagebreak: { mode: 'avoid-all' },
+            enableLinks: 'true',
+            filename: 'Open Source Software Assessment Results - Internews.pdf',
+            image: { type: 'jpeg', quality: '1' },
+            html2canvas: { scale: 3 },
+            jsPDF: { unit: 'cm', format: 'letter', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(element).save();
+    </script>
+
     <script>
         saveStorage('#code-form');
         saveStorage('#license-form');
