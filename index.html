@@ -31,7 +31,7 @@
                 <div class="navbar navbar-expand-lg navbar-light justify-content-between py-4" role="navigation"
                     aria-label="Assessment Progress Indicators">
 
-                    <a class="navbar-brand" href="#">
+                    <a id="logo" class="navbar-brand" href="#">
                         <img loading="lazy" src="assets/images/logo.svg" title="Open Source Assessment from Internews"
                             alt="Open Source Assessment logo" width="400px">
                     </a>
@@ -2683,99 +2683,27 @@
         <script src="assets/js/savestorage.js"></script>
 
         <script>
-            const checkboxesRaw = document.querySelectorAll(".checkbox-limit");
-            const max = 5;
-
-            const checkboxes = [];
-            checkboxesRaw.forEach((box) => checkboxes.push(box));
-
-            const currentSelected = () => checkboxes.reduce((acc, el) => acc + (el.checked ? 1 : 0), 0);
-
-            checkboxes.forEach((box) => {
-                box.addEventListener('click', () => {
-                    if (currentSelected() > max) {
-                        if (box.checked) {
-                            box.checked = false;
-                        }
-                    } else {
-                        const id = box.parentElement.parentElement.parentElement.id.replace("-review", "");
-                        const element = document.querySelector(`#${id}-discussion`);
-                        if (box.checked) {
-                            element.style.display = "block";
-                        } else {
-                            element.style.display = "none";
-                        }
-                    }
-                });
-            });
-        </script>
-
-        <script>
-            function toggleDisplay(id) {
-                var el = document.getElementById(id);
-                var last_step = document.getElementById('description-discuss');
-                var nav = document.getElementById('stepper');
-                nav.style.display = "none";
-                last_step.style.display = "none";
-                el.style.display = "block";
-            }
-            function secondpage() {
-                var strategizeTab = document.querySelector('#pills-strategize-tab');
-                var tab = new bootstrap.Tab(strategizeTab);
-
-                tab.show();
-                document.documentElement.scrollTop = 0;
-                document.body.scrollTop = 0;
-            }
-            function thirdpage() {
-                var reviewTab = document.querySelector('#pills-review-tab');
-                var tab = new bootstrap.Tab(reviewTab);
-
-                tab.show();
-                document.documentElement.scrollTop = 0;
-                document.body.scrollTop = 0;
-            }
-            function fourthpage() {
-                var discussTab = document.querySelector('#pills-discuss-tab');
-                var tab = new bootstrap.Tab(discussTab);
-
-                tab.show();
-                document.documentElement.scrollTop = 0;
-                document.body.scrollTop = 0;
-            }
-            function backtofirstpage() {
-                var assessTab = document.querySelector('#pills-assess-tab');
-                var tab = new bootstrap.Tab(assessTab);
-
-                tab.show();
-                document.documentElement.scrollTop = 0;
-                document.body.scrollTop = 0;
-            }
-            function backtosecondpage() {
-                var strategizeTab = document.querySelector('#pills-strategize-tab');
-                var tab = new bootstrap.Tab(strategizeTab);
-
-                tab.show();
-                document.documentElement.scrollTop = 0;
-                document.body.scrollTop = 0;
-            }
-            function backtothirdpage() {
-                var reviewTab = document.querySelector('#pills-review-tab');
-                var tab = new bootstrap.Tab(reviewTab);
-
-                tab.show();
-                document.documentElement.scrollTop = 0;
-                document.body.scrollTop = 0;
-            }
-        </script>
-
-        <script>
-            window.onbeforeprint = () => {
-                const details = document.querySelectorAll("details");
-                details.forEach((detail) => {
-                    detail.setAttribute("open", "");
-                });
-            };
+            saveStorage('[data-storage-name=code]');
+            saveStorage('[data-storage-name=license]');
+            saveStorage('[data-storage-name=release]');
+            saveStorage('[data-storage-name=quality]');
+            saveStorage('[data-storage-name=community]');
+            saveStorage('[data-storage-name=diversity]');
+            saveStorage('[data-storage-name=transparency]');
+            saveStorage('[data-storage-name=governance]');
+            saveStorage('[data-storage-name=friendliness]');
+            saveStorage('[data-storage-name=sustainability]');
+            saveStorage('[data-storage-name=strategize]');
+            saveStorage('[data-storage-name=code-discuss]');
+            saveStorage('[data-storage-name=license-discuss]');
+            saveStorage('[data-storage-name=release-discuss]');
+            saveStorage('[data-storage-name=quality-discuss]');
+            saveStorage('[data-storage-name=community-discuss]');
+            saveStorage('[data-storage-name=diversity-discuss]');
+            saveStorage('[data-storage-name=transparency-discuss]');
+            saveStorage('[data-storage-name=governance-discuss]');
+            saveStorage('[data-storage-name=friendliness-discuss]');
+            saveStorage('[data-storage-name=sustainability-discuss]');
         </script>
 
         <script>
@@ -2807,27 +2735,127 @@
         </script>
 
         <script>
-            saveStorage('[data-storage-name=code]');
-            saveStorage('[data-storage-name=license]');
-            saveStorage('[data-storage-name=release]');
-            saveStorage('[data-storage-name=quality]');
-            saveStorage('[data-storage-name=community]');
-            saveStorage('[data-storage-name=diversity]');
-            saveStorage('[data-storage-name=transparency]');
-            saveStorage('[data-storage-name=governance]');
-            saveStorage('[data-storage-name=friendliness]');
-            saveStorage('[data-storage-name=sustainability]');
-            saveStorage('[data-storage-name=strategize]');
-            saveStorage('[data-storage-name=code-discuss]');
-            saveStorage('[data-storage-name=license-discuss]');
-            saveStorage('[data-storage-name=release-discuss]');
-            saveStorage('[data-storage-name=quality-discuss]');
-            saveStorage('[data-storage-name=community-discuss]');
-            saveStorage('[data-storage-name=diversity-discuss]');
-            saveStorage('[data-storage-name=transparency-discuss]');
-            saveStorage('[data-storage-name=governance-discuss]');
-            saveStorage('[data-storage-name=friendliness-discuss]');
-            saveStorage('[data-storage-name=sustainability-discuss]');
+            const checkboxesRaw = document.querySelectorAll(".checkbox-limit");
+            const max = 5;
+
+            const checkboxes = [];
+            checkboxesRaw.forEach((box) => checkboxes.push(box));
+
+            const currentSelected = () => checkboxes.reduce((acc, el) => acc + (el.checked ? 1 : 0), 0);
+
+            checkboxes.forEach((box) => {
+                box.addEventListener('click', () => {
+                    if (currentSelected() > max) {
+                        if (box.checked) {
+                            box.checked = false;
+                        }
+                    } else {
+                        const id = box.parentElement.parentElement.parentElement.id.replace("-review", "");
+                        const element = document.querySelector(`#${id}-discussion`);
+                        if (box.checked) {
+                            element.style.display = "block";
+                        } else {
+                            element.style.display = "none";
+                        }
+                    }
+                });
+            });
+        </script>
+
+        <script>
+            (function () {
+                var cbstate;
+
+                window.addEventListener('load', function () {
+                    cbstate = JSON.parse(localStorage['CBState'] || '{}');
+
+                    for (var i in cbstate) {
+                        var el = document.querySelector('input[name="' + i + '"]');
+                        if (el) el.checked = true;
+                    }
+
+                    var cb = document.getElementsByClassName('checkbox-limit');
+
+                    for (var i = 0; i < cb.length; i++) {
+
+                        cb[i].addEventListener('click', function (evt) {
+                            if (this.checked) {
+                                cbstate[this.name] = true;
+                            }
+                            else if (cbstate[this.name]) {
+                                delete cbstate[this.name];
+                            }
+                            localStorage.CBState = JSON.stringify(cbstate);
+                        });
+                    }
+                });
+            })();
+        </script>
+
+        <script>
+            function scrollTop() {
+                window.scrollTo(0, 0);
+            }
+            function toggleDisplay(id) {
+                var el = document.getElementById(id);
+                var last_step = document.getElementById('description-discuss');
+                var nav = document.getElementById('stepper');
+                nav.style.display = "none";
+                last_step.style.display = "none";
+                el.style.display = "block";
+                scrollTop();
+            }
+            function secondpage() {
+                var strategizeTab = document.querySelector('#pills-strategize-tab');
+                var tab = new bootstrap.Tab(strategizeTab);
+
+                tab.show();
+                scrollTop()
+            }
+            function thirdpage() {
+                var reviewTab = document.querySelector('#pills-review-tab');
+                var tab = new bootstrap.Tab(reviewTab);
+
+                tab.show();
+                scrollTop();
+            }
+            function fourthpage() {
+                var discussTab = document.querySelector('#pills-discuss-tab');
+                var tab = new bootstrap.Tab(discussTab);
+
+                tab.show();
+                scrollTop();
+            }
+            function backtofirstpage() {
+                var assessTab = document.querySelector('#pills-assess-tab');
+                var tab = new bootstrap.Tab(assessTab);
+
+                tab.show();
+                scrollTop();
+            }
+            function backtosecondpage() {
+                var strategizeTab = document.querySelector('#pills-strategize-tab');
+                var tab = new bootstrap.Tab(strategizeTab);
+
+                tab.show();
+                scrollTop();
+            }
+            function backtothirdpage() {
+                var reviewTab = document.querySelector('#pills-review-tab');
+                var tab = new bootstrap.Tab(reviewTab);
+
+                tab.show();
+                scrollTop();
+            }
+        </script>
+
+        <script>
+            window.onbeforeprint = () => {
+                const details = document.querySelectorAll("details");
+                details.forEach((detail) => {
+                    detail.setAttribute("open", "");
+                });
+            };
         </script>
 
 </body>
