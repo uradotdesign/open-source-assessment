@@ -922,7 +922,7 @@
 
                         <div class="d-flex justify-content-center align-items-center pt-3 navigation">
                             <button class="back me-3" disabled>Back</button>
-                            <button id="first-next" class="next">Next</button>
+                            <button id="first-next" class="next" onclick="secondpage();">Next</button>
                         </div>
 
                     </div>
@@ -1095,8 +1095,8 @@
                             </ol>
 
                             <div class="d-flex justify-content-center align-items-center pt-3 navigation">
-                                <button class="back me-3">Back</button>
-                                <button id="first-next" class="next">Next</button>
+                                <button class="back me-3" onclick="backtofirstpage();">Back</button>
+                                <button id="first-next" class="next" onclick="thirdpage();">Next</button>
                             </div>
 
                         </section>
@@ -2116,8 +2116,8 @@
                             </div>
 
                             <div class="d-flex justify-content-center align-items-center pt-3 navigation">
-                                <button class="back me-3">Back</button>
-                                <button id="first-next" class="next">Next</button>
+                                <button class="back me-3" onclick="backtosecondpage();">Back</button>
+                                <button class="next" onclick="fourthpage();">Next</button>
                             </div>
 
                         </section>
@@ -2634,7 +2634,7 @@
                             </details>
 
                             <div class="d-flex justify-content-center align-items-center pt-3 navigation">
-                                <button class="back me-3">Back</button>
+                                <button class="back me-3" onclick="backtothirdpage();">Back</button>
                                 <button class="next" onclick="toggleDisplay('final-screen')">Finish</button>
                             </div>
 
@@ -2718,6 +2718,54 @@
                 nav.style.display = "none";
                 last_step.style.display = "none";
                 el.style.display = "block";
+            }
+            function secondpage() {
+                var strategizeTab = document.querySelector('#pills-strategize-tab');
+                var tab = new bootstrap.Tab(strategizeTab);
+
+                tab.show();
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+            }
+            function thirdpage() {
+                var reviewTab = document.querySelector('#pills-review-tab');
+                var tab = new bootstrap.Tab(reviewTab);
+
+                tab.show();
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+            }
+            function fourthpage() {
+                var discussTab = document.querySelector('#pills-discuss-tab');
+                var tab = new bootstrap.Tab(discussTab);
+
+                tab.show();
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+            }
+            function backtofirstpage() {
+                var assessTab = document.querySelector('#pills-assess-tab');
+                var tab = new bootstrap.Tab(assessTab);
+
+                tab.show();
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+            }
+            function backtosecondpage() {
+                var strategizeTab = document.querySelector('#pills-strategize-tab');
+                var tab = new bootstrap.Tab(strategizeTab);
+
+                tab.show();
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+            }
+            function backtothirdpage() {
+                var reviewTab = document.querySelector('#pills-review-tab');
+                var tab = new bootstrap.Tab(reviewTab);
+
+                tab.show();
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
             }
         </script>
 
