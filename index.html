@@ -2775,6 +2775,11 @@
                     if (!!tabState) {
                         document.querySelector(`[data-bs-target="#${tabState}"]`).click();
                     }
+
+                    var inputs = document.getElementsByTagName("form");
+                    for (j = 0; j < inputs.length; j++) {
+                        inputs[j].setAttribute("autocomplete", "off");
+                    };
                 });
             })();
         </script>
@@ -2839,15 +2844,6 @@
         </script>
 
         <script>
-            window.onbeforeprint = () => {
-                const details = document.querySelectorAll("details");
-                details.forEach((detail) => {
-                    detail.setAttribute("open", "");
-                });
-            };
-        </script>
-
-        <script>
             [...document.getElementsByTagName("details")].forEach((D, _, A) =>
                 D.addEventListener("toggle", E =>
                     D.open && A.forEach(d =>
@@ -2855,6 +2851,15 @@
                     )
                 )
             )
+        </script>
+
+        <script>
+            window.onbeforeprint = () => {
+                const details = document.querySelectorAll("details");
+                details.forEach((detail) => {
+                    detail.setAttribute("open", "");
+                });
+            };
         </script>
 
 </body>
