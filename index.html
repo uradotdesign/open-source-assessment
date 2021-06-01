@@ -2826,12 +2826,31 @@
                     } else {
                         const id = box.parentElement.parentElement.parentElement.id.replace("-review", "");
                         const element = document.querySelector(`#${id}-discussion`);
+                        let value = JSON.parse(localStorage.getItem("discussions") || "[]")
+
                         if (box.checked) {
                             element.style.display = "block";
+                            value.push(id);
+
                         } else {
                             element.style.display = "none";
+                            value = value.filter((v) => v !== id);
                         }
+
+                        localStorage.setItem("discussions", JSON.stringify(value));
                     }
+                });
+            });
+        </script>
+
+        <script>
+            const tabs = document.querySelectorAll('button[data-bs-toggle="pill"]');
+            const key = "tab-state";
+
+            tabs.forEach((tab) => {
+                tab.addEventListener('show.bs.tab', (event) => {
+                    const selected = event.target.attributes["data-bs-target"].value.replace("#", "");
+                    localStorage.setItem(key, selected);
                 });
             });
         </script>
@@ -2861,6 +2880,20 @@
                             }
                             localStorage.CBState = JSON.stringify(cbstate);
                         });
+                    }
+
+                    const discussions = JSON.parse(localStorage.getItem("discussions") || "[]");
+                    discussions.forEach((d) => {
+                        const element = document.querySelector(`#${d}-discussion`);
+
+                        if (!!element) {
+                            element.style.display = "block";
+                        }
+                    });
+
+                    const tabState = localStorage.getItem("tab-state");
+                    if (!!tabState) {
+                        document.querySelector(`[data-bs-target="#${tabState}"]`).click();
                     }
                 });
             })();
