@@ -423,6 +423,18 @@ button.next:hover {
   z-index: -1;
 }
 
+.nav-pills .nav-link.active-1:after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  min-width: 1px;
+  width: 95px;
+  background-color: rgba(0, 92, 171, 1);
+  top: 29%;
+  left: 65px;
+  z-index: -1;
+}
+
 .last:after {
   content: "";
   width: 0 !important;
@@ -494,8 +506,13 @@ ul {
   }
   .nav-pills .nav-link {
     padding: 5px 8px !important;
+    font-size: 0.85rem;
   }
   label {
     display: block;
+  }
+  #final-screen .back,
+  #final-screen .next {
+    padding: 8px 15px;
   }
 }
