@@ -2599,9 +2599,9 @@
 
                                     <div class="d-flex justify-content-center align-items-center pt-3 navigation">
                                         <button class="back me-3"
-                                            onclick="localStorage.clear(); window.location.reload();">New
+                                            onclick="localStorage.clear(); document.forms[0].reset(); window.location.reload();">New
                                             Submission</button>
-                                        <button class="next" onclick="window.print()">Download
+                                        <button class="next" onclick="window.print();">Download
                                             Submission</button>
                                     </div>
                                 </div>
@@ -2776,10 +2776,6 @@
                         document.querySelector(`[data-bs-target="#${tabState}"]`).click();
                     }
 
-                    var inputs = document.getElementsByTagName("form");
-                    for (j = 0; j < inputs.length; j++) {
-                        inputs[j].setAttribute("autocomplete", "off");
-                    };
                 });
             })();
         </script>

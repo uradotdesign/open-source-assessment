@@ -502,11 +502,30 @@ ul {
 
 @media (max-width: 992px) {
   .nav-pills .nav-link:after {
-    display: none;
+    position: absolute;
+    content: "";
+    height: 2px;
+    min-width: 1px;
+    width: 70px;
+    background-color: rgba(0, 0, 0, 0.12);
+    top: 30%;
+    left: 50px;
+    z-index: -1;
+  }
+  .nav-pills .nav-link.active-1:after {
+    position: absolute;
+    content: "";
+    height: 4px;
+    min-width: 1px;
+    width: 70px;
+    background-color: rgba(0, 92, 171, 1);
+    top: 29%;
+    left: 50px;
+    z-index: -1;
   }
   .nav-pills .nav-link {
     padding: 5px 8px !important;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
   label {
     display: block;
