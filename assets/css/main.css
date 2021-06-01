@@ -299,6 +299,10 @@ textarea:focus-visible {
   font-weight: 700;
 }
 
+.form-group.disabled > label {
+  pointer-events: none;
+}
+
 button.back:disabled {
   color: #0d5cab;
   background: transparent;

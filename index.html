@@ -109,13 +109,13 @@
                                 <form id="code-form" data-storage-name="code">
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="code-score-0" name="code-score-0">
+                                        <input type="radio" id="code-score-0" name="code-score" value="code-score-0">
                                         <label for="code-score-0"><strong>Score 0</strong>: Does not meet Score 1
                                             criteria</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="code-score-1" name="code-score-1">
+                                        <input type="radio" id="code-score-1" name="code-score" value="code-score-1">
                                         <label for="code-score-1"><strong>Score 1</strong>: The project produces Open
                                             Source
                                             software,
@@ -123,7 +123,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="code-score-2" name="code-score-2">
+                                        <input type="radio" id="code-score-2" name="code-score" value="code-score-2">
                                         <label for="code-score-2"><strong>Score 2</strong>: The project's code is easily
                                             discoverable
                                             and
@@ -131,7 +131,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="code-score-3" name="code-score-3">
+                                        <input type="radio" id="code-score-3" name="code-score" value="code-score-3">
                                         <label for="code-score-3"><strong>Score 3</strong>: The code can be built in a
                                             reproducible
                                             way
@@ -139,7 +139,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="code-score-4" name="code-score-4">
+                                        <input type="radio" id="code-score-4" name="code-score" value="code-score-4">
                                         <label for="code-score-4"><strong>Score 4</strong>: The full history of the
                                             project's
                                             code is
@@ -150,7 +150,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="code-score-5" name="code-score-5">
+                                        <input type="radio" id="code-score-5" name="code-score" value="code-score-5">
                                         <label for="code-score-5"><strong>Score 5</strong>: The provenance of each line
                                             of code
                                             is
@@ -195,20 +195,23 @@
                                 <form id="license-form" data-storage-name="license">
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="license-score-0" name="license-score-0">
+                                        <input type="radio" id="license-score-0" name="license-score"
+                                            value="license-score-0">
                                         <label for="license-score-0"><strong>Score 0</strong>: Does not meet Score 1
                                             criteria</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="license-score-1" name="license-score-1">
+                                        <input type="radio" id="license-score-1" name="license-score"
+                                            value="license-score-1">
                                         <label for="license-score-1"><strong>Score 1</strong>: The code is released
                                             under
                                             an OSI- or FSF-approved license.</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="license-score-2" name="license-score-2">
+                                        <input type="radio" id="license-score-2" name="license-score"
+                                            value="license-score-2">
                                         <label for="license-score-2"><strong>Score 2</strong>: Libraries that are
                                             mandatory
                                             dependencies of the project's code do not create more restrictions than the
@@ -216,14 +219,16 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="license-score-3" name="license-score-3">
+                                        <input type="radio" id="license-score-3" name="license-score"
+                                            value="license-score-3">
                                         <label for="license-score-3"><strong>Score 3</strong>: The libraries that are
                                             mandatory dependencies of the project's code are available as Open Source
                                             software. </label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="license-score-4" name="license-score-4">
+                                        <input type="radio" id="license-score-4" name="license-score"
+                                            value="license-score-4">
                                         <label for="license-score-4"><strong>Score 4</strong>: Committers are bound by
                                             an
                                             Individual Contributor Agreement that defines which code they are allowed to
@@ -231,7 +236,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="license-score-5" name="license-score-5">
+                                        <input type="radio" id="license-score-5" name="license-score"
+                                            value="license-score-5">
                                         <label for="license-score-5"><strong>Score 5</strong>: The copyright ownership
                                             of
                                             everything that the project produces is clearly defined and documented.
@@ -271,13 +277,15 @@
                                 <form id="release-form" data-storage-name="release">
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="release-score-0" name="release-score-0">
+                                        <input type="radio" id="release-score-0" name="release-score"
+                                            value="release-score-0">
                                         <label for="release-score-0"><strong>Score 0</strong>: Does not meet Score 1
                                             criteria</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="release-score-1" name="release-score-1">
+                                        <input type="radio" id="release-score-1" name="release-score"
+                                            value="release-score-1">
                                         <label for="release-score-1"><strong>Score 1</strong>: Releases consist of
                                             source
                                             code, distributed using standard and open archive formats that are expected
@@ -285,14 +293,16 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="release-score-2" name="release-score-2">
+                                        <input type="radio" id="release-score-2" name="release-score"
+                                            value="release-score-2">
                                         <label for="release-score-2"><strong>Score 2</strong>: The project maintains a
                                             section of the website/homepage where all releases and release notes are
                                             documented and archived.</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="release-score-3" name="release-score-3">
+                                        <input type="radio" id="release-score-3" name="release-score"
+                                            value="release-score-3">
                                         <label for="release-score-3"><strong>Score 3</strong>: Releases are signed
                                             and/or
                                             distributed along with digests that can be reliably used to validate the
@@ -300,14 +310,16 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="release-score-4" name="release-score-4">
+                                        <input type="radio" id="release-score-4" name="release-score"
+                                            value="release-score-4">
                                         <label for="release-score-4"><strong>Score 4</strong>: The release process is
                                             documented to the extent that it could be handed off to a new release
                                             manager.</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="release-score-5" name="release-score-5">
+                                        <input type="radio" id="release-score-5" name="release-score"
+                                            value="release-score-5">
                                         <label for="release-score-5"><strong>Score 5</strong>: The release process is
                                             documented and repeatable to the extent that someone new to the project is
                                             able to independently generate the complete set of artifacts required for a
@@ -348,13 +360,15 @@
                                 <form id="quality-form" data-storage-name="quality">
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="quality-score-0" name="quality-score-0">
+                                        <input type="radio" id="quality-score-0" name="quality-score"
+                                            value="quality-score-0">
                                         <label for="quality-score-0"><strong>Score 0</strong>: Does not meet Score 1
                                             criteria</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="quality-score-1" name="quality-score-1">
+                                        <input type="radio" id="quality-score-1" name="quality-score"
+                                            value="quality-score-1">
                                         <label for="quality-score-1"><strong>Score 1</strong>: The project is open and
                                             honest about the quality of its code. Various levels of quality and maturity
                                             for various modules are natural and acceptable as long as they are clearly
@@ -362,21 +376,24 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="quality-score-2" name="quality-score-2">
+                                        <input type="radio" id="quality-score-2" name="quality-score"
+                                            value="quality-score-2">
                                         <label for="quality-score-2"><strong>Score 2</strong>: The project puts a very
                                             high
                                             priority on producing secure software.</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="quality-score-3" name="quality-score-3">
+                                        <input type="radio" id="quality-score-3" name="quality-score"
+                                            value="quality-score-3">
                                         <label for="quality-score-3"><strong>Score 3</strong>: The project provides a
                                             well-documented, secure and private channel to report security issues, along
                                             with a documented way of responding to them.</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="quality-score-4" name="quality-score-4">
+                                        <input type="radio" id="quality-score-4" name="quality-score"
+                                            value="quality-score-4">
                                         <label for="quality-score-4"><strong>Score 4</strong>: The project puts a high
                                             priority on backwards compatibility and aims to document any incompatible
                                             changes and provide tools and documentation to help users transition to new
@@ -384,7 +401,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="quality-score-5" name="quality-score-5">
+                                        <input type="radio" id="quality-score-5" name="quality-score"
+                                            value="quality-score-5">
                                         <label for="quality-score-5"><strong>Score 5</strong>: The project strives to
                                             respond to documented bug reports in a timely manner.</label>
                                     </div>
@@ -423,13 +441,15 @@
                                 <form id="community-form" data-storage-name="community">
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="community-score-0" name="community-score-0">
+                                        <input type="radio" id="community-score-0" name="community-score"
+                                            value="community-score-0">
                                         <label for="community-score-0"><strong>Score 0</strong>: Does not meet Score 1
                                             criteria</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="community-score-1" name="community-score-1">
+                                        <input type="radio" id="community-score-1" name="community-score"
+                                            value="community-score-1">
                                         <label for="community-score-1"><strong>Score 1</strong>: The project has a
                                             homepage
                                             that points to all the information required to participate in the community
@@ -437,7 +457,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="community-score-2" name="community-score-2">
+                                        <input type="radio" id="community-score-2" name="community-score"
+                                            value="community-score-2">
                                         <label for="community-score-2"><strong>Score 2</strong>: The community welcomes
                                             contributions from anyone who acts in good faith and in a respectful manner
                                             and adds value to the project. New contributors receive welcoming
@@ -445,7 +466,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="community-score-3" name="community-score-3">
+                                        <input type="radio" id="community-score-3" name="community-score"
+                                            value="community-score-3">
                                         <label for="community-score-3"><strong>Score 3</strong>: Contributions include
                                             not
                                             only source code, but also documentation, constructive bug reports,
@@ -456,7 +478,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="community-score-4" name="community-score-4">
+                                        <input type="radio" id="community-score-4" name="community-score"
+                                            value="community-score-4">
                                         <label for="community-score-4"><strong>Score 4</strong>: The community strives
                                             to be
                                             meritocratic and over time aims to give more rights and responsibilities to
@@ -467,7 +490,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="community-score-5" name="community-score-5">
+                                        <input type="radio" id="community-score-5" name="community-score"
+                                            value="community-score-5">
                                         <label for="community-score-5"><strong>Score 5</strong>: The way in which
                                             contributors can be granted more rights such as commit access or decision
                                             power is clearly documented and is the same for all contributors. Most code
@@ -507,13 +531,15 @@
                                 <form id="diversity-form" data-storage-name="diversity">
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="diversity-score-0" name="diversity-score-0">
+                                        <input type="radio" id="diversity-score-0" name="diversity-score"
+                                            value="diversity-score-0">
                                         <label for="diversity-score-0"><strong>Score 0</strong>: Does not meet Score 1
                                             criteria</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="diversity-score-1" name="diversity-score-1">
+                                        <input type="radio" id="diversity-score-1" name="diversity-score"
+                                            value="diversity-score-1">
                                         <label for="diversity-score-1"><strong>Score 1</strong>: The project has a
                                             published
                                             code of conduct that applies to all members of the community. The project
@@ -523,7 +549,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="diversity-score-2" name="diversity-score-2">
+                                        <input type="radio" id="diversity-score-2" name="diversity-score"
+                                            value="diversity-score-2">
                                         <label for="diversity-score-2"><strong>Score 2</strong>: The project has clear
                                             processes in place for managing code of conduct reports, including a
                                             conflict of interest policy and options for reporting to different
@@ -532,7 +559,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="diversity-score-3" name="diversity-score-3">
+                                        <input type="radio" id="diversity-score-3" name="diversity-score"
+                                            value="diversity-score-3">
                                         <label for="diversity-score-3"><strong>Score 3</strong>: The project has
                                             established
                                             practices for welcoming new contributors and ensuring friendly and
@@ -542,7 +570,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="diversity-score-4" name="diversity-score-4">
+                                        <input type="radio" id="diversity-score-4" name="diversity-score"
+                                            value="diversity-score-4">
                                         <label for="diversity-score-4"><strong>Score 4</strong>: Project leadership
                                             works to
                                             limit technical jargon and other language that could be off-putting to new
@@ -553,7 +582,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="diversity-score-5" name="diversity-score-5">
+                                        <input type="radio" id="diversity-score-5" name="diversity-score"
+                                            value="diversity-score-5">
                                         <label for="diversity-score-5"><strong>Score 5</strong>: The project actively
                                             works
                                             to mitigate unconscious bias in communications and decision-making.
@@ -595,14 +625,16 @@
                                 <form id="transparency-form" data-storage-name="transparency">
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="transparency-score-0" name="transparency-score-0">
+                                        <input type="radio" id="transparency-score-0" name="transparency-score"
+                                            value="transparency-score-0">
                                         <label for="transparency-score-0"><strong>Score 0</strong>: Does not meet Score
                                             1
                                             criteria</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="transparency-score-1" name="transparency-score-1">
+                                        <input type="radio" id="transparency-score-1" name="transparency-score"
+                                            value="transparency-score-1">
                                         <label for="transparency-score-1"><strong>Score 1</strong>: The project
                                             maintains a
                                             public list of its contributors who have decision power -- the project's
@@ -610,7 +642,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="transparency-score-2" name="transparency-score-2">
+                                        <input type="radio" id="transparency-score-2" name="transparency-score"
+                                            value="transparency-score-2">
                                         <label for="transparency-score-2"><strong>Score 2</strong>: Decisions are made
                                             by
                                             consensus among project leaders and are documented on the project's main
@@ -619,21 +652,24 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="transparency-score-3" name="transparency-score-3">
+                                        <input type="radio" id="transparency-score-3" name="transparency-score"
+                                            value="transparency-score-3">
                                         <label for="transparency-score-3"><strong>Score 3</strong>: Documented voting
                                             rules are
                                             used to build consensus when discussion is not sufficient.</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="transparency-score-4" name="transparency-score-4">
+                                        <input type="radio" id="transparency-score-4" name="transparency-score"
+                                            value="transparency-score-4">
                                         <label for="transparency-score-4"><strong>Score 4</strong>: The project
                                             maintains a
                                             public-facing roadmap that is kept up-to-date.</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="transparency-score-5" name="transparency-score-5">
+                                        <input type="radio" id="transparency-score-5" name="transparency-score"
+                                            value="transparency-score-5">
                                         <label for="transparency-score-5"><strong>Score 5</strong>: All "important"
                                             discussions
                                             happen asynchronously in written form on the project's main communications
@@ -675,27 +711,31 @@
                                 <form id="governance-form" data-storage-name="governance">
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="governance-score-0" name="governance-score-0">
+                                        <input type="radio" id="governance-score-0" name="governance-score"
+                                            value="governance-score-0">
                                         <label for="governance-score-0"><strong>Score 0</strong>: Does not meet Score 1
                                             criteria</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="governance-score-1" name="governance-score-1">
+                                        <input type="radio" id="governance-score-1" name="governance-score"
+                                            value="governance-score-1">
                                         <label for="governance-score-1"><strong>Score 1</strong>: The project maintains
                                             a
                                             public list of its leadership.</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="governance-score-2" name="governance-score-2">
+                                        <input type="radio" id="governance-score-2" name="governance-score"
+                                            value="governance-score-2">
                                         <label for="governance-score-2"><strong>Score 2</strong>: The project's
                                             leadership
                                             roster clearly states the roles and responsibilities of each leader.</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="governance-score-3" name="governance-score-3">
+                                        <input type="radio" id="governance-score-3" name="governance-score"
+                                            value="governance-score-3">
                                         <label for="governance-score-3"><strong>Score 3</strong>: There is documentation
                                             of
                                             how decisions are made within the project and how conflicts are
@@ -703,7 +743,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="governance-score-4" name="governance-score-4">
+                                        <input type="radio" id="governance-score-4" name="governance-score"
+                                            value="governance-score-4">
                                         <label for="governance-score-4"><strong>Score 4</strong>: The project has clear
                                             and
                                             documented opportunities to move into leadership roles which are available
@@ -713,7 +754,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="governance-score-5" name="governance-score-5">
+                                        <input type="radio" id="governance-score-5" name="governance-score"
+                                            value="governance-score-5">
                                         <label for="governance-score-5"><strong>Score 5</strong>: The project maintains
                                             an
                                             active pipeline of potential new leaders for the project, including
@@ -755,21 +797,24 @@
                                 <form id="friendliness-form" data-storage-name="friendliness">
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="friendliness-score-0" name="friendliness-score-0">
+                                        <input type="radio" id="friendliness-score-0" name="friendliness-score"
+                                            value="friendliness-score-0">
                                         <label for="friendliness-score-0"><strong>Score 0</strong>: Does not meet Score
                                             1
                                             criteria</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="friendliness-score-1" name="friendliness-score-1">
+                                        <input type="radio" id="friendliness-score-1" name="friendliness-score"
+                                            value="friendliness-score-1">
                                         <label for="friendliness-score-1"><strong>Score 1</strong>: The project
                                             maintains a
                                             user-facing website.</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="friendliness-score-2" name="friendliness-score-2">
+                                        <input type="radio" id="friendliness-score-2" name="friendliness-score"
+                                            value="friendliness-score-2">
                                         <label for="friendliness-score-2"><strong>Score 2</strong>: The project website
                                             includes
                                             clear instructions for getting help (e.g. documentation, opening
@@ -777,7 +822,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="friendliness-score-3" name="friendliness-score-3">
+                                        <input type="radio" id="friendliness-score-3" name="friendliness-score"
+                                            value="friendliness-score-3">
                                         <label for="friendliness-score-3"><strong>Score 3</strong>: The project itself
                                             contains
                                             a "help" function for users to report errors and seek support, native to the
@@ -785,7 +831,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="friendliness-score-4" name="friendliness-score-4">
+                                        <input type="radio" id="friendliness-score-4" name="friendliness-score"
+                                            value="friendliness-score-4">
                                         <label for="friendliness-score-4"><strong>Score 4</strong>: The project has a
                                             defined
                                             workflow for triaging user support requests and fixing bug reports. Users
@@ -793,7 +840,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="friendliness-score-5" name="friendliness-score-5">
+                                        <input type="radio" id="friendliness-score-5" name="friendliness-score"
+                                            value="friendliness-score-5">
                                         <label for="friendliness-score-5"><strong>Score 5</strong>: The project strives
                                             to
                                             answer user questions in a timely manner. The issue queue is actively
@@ -837,24 +885,24 @@
                                 <form id="sustainability-form" data-storage-name="sustainability">
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="sustainability-score-0"
-                                            name="sustainability-score-0">
+                                        <input type="radio" id="sustainability-score-0" name="sustainability-score"
+                                            value="sustainability-score-0">
                                         <label for="sustainability-score-0"><strong>Score 0</strong>: Does not meet
                                             Score 1
                                             criteria</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="sustainability-score-1"
-                                            name="sustainability-score-1">
+                                        <input type="radio" id="sustainability-score-1" name="sustainability-score"
+                                            value="sustainability-score-1">
                                         <label for="sustainability-score-1"><strong>Score 1</strong>: The project has
                                             published
                                             some code and there is at least one user of it.</label>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="sustainability-score-2"
-                                            name="sustainability-score-2">
+                                        <input type="radio" id="sustainability-score-2" name="sustainability-score"
+                                            value="sustainability-score-2">
                                         <label for="sustainability-score-2"><strong>Score 2</strong>: The project has a
                                             small team
                                             of developers, often working on a volunteer basis. There is limited insight
@@ -862,8 +910,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="sustainability-score-3"
-                                            name="sustainability-score-3">
+                                        <input type="radio" id="sustainability-score-3" name="sustainability-score"
+                                            value="sustainability-score-3">
                                         <label for="sustainability-score-3"><strong>Score 3</strong>: There are multiple
                                             developers or development teams spread out at different institutions,
                                             working on the same code. Some developers may have paid time to work on the
@@ -872,8 +920,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="sustainability-score-4"
-                                            name="sustainability-score-4">
+                                        <input type="radio" id="sustainability-score-4" name="sustainability-score"
+                                            value="sustainability-score-4">
                                         <label for="sustainability-score-4"><strong>Score 4</strong>: The project has a
                                             self-governing developer community deliberately supporting a broad user
                                             community. Funding opportunities to support the project have been identified
@@ -881,8 +929,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="checkbox" id="sustainability-score-5"
-                                            name="sustainability-score-5">
+                                        <input type="radio" id="sustainability-score-5" name="sustainability-score"
+                                            value="sustainability-score-5">
                                         <label for="sustainability-score-5"><strong>Score 5</strong>: The project is a
                                             self-sustaining organization dedicated to supporting the user and developer
                                             community (e.g. through commercial support, events, a software foundation,
@@ -946,9 +994,9 @@
                                 conversation towards answers that will ultimately prove useful in designing your
                                 capacity action plan. (In other words, focus on the practicalities at stake.)</p>
 
-                            <a class="handbook" href="#" target="_blank" rel="noopener noreferrer">Handbook for External
-                                Evaluators (PDF)<br />
-                                <span class="description">If you are working with a Facilitator for this.</span>
+                            <a class="handbook" href="#" target="_blank" rel="noopener noreferrer">Working with a
+                                facilitator?<br />
+                                <span class="description">Click here for the facilitation guide</span>
                             </a>
 
                             <hr class="mt-4">
@@ -1125,14 +1173,17 @@
                                     </summary>
                                     <form id="code-review" data-storage-name="code">
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="code-score-0" name="code-score-0" disabled>
-                                            <label for="code-score-0"><strong>Score 0</strong>: Does not meet Score 1
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="code-score-0" name="code-score" value="code-score-0"
+                                                disabled>
+                                            <label for="code-score-0"><strong>Score 0</strong>: Does not meet
+                                                Score 1
                                                 criteria</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="code-score-1" name="code-score-1" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="code-score-1" name="code-score" value="code-score-1"
+                                                disabled>
                                             <label for="code-score-1"><strong>Score 1</strong>: The project produces
                                                 Open
                                                 Source
@@ -1140,8 +1191,9 @@
                                                 for distribution to the public at no charge.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="code-score-2" name="code-score-2" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="code-score-2" name="code-score" value="code-score-2"
+                                                disabled>
                                             <label for="code-score-2"><strong>Score 2</strong>: The project's code is
                                                 easily
                                                 discoverable
@@ -1149,8 +1201,9 @@
                                                 publicly accessible.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="code-score-3" name="code-score-3" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="code-score-3" name="code-score" value="code-score-3"
+                                                disabled>
                                             <label for="code-score-3"><strong>Score 3</strong>: The code can be built in
                                                 a
                                                 reproducible
@@ -1158,8 +1211,9 @@
                                                 using widely available standard tools.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="code-score-4" name="code-score-4" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="code-score-4" name="code-score" value="code-score-4"
+                                                disabled>
                                             <label for="code-score-4"><strong>Score 4</strong>: The full history of the
                                                 project's
                                                 code is
@@ -1169,8 +1223,9 @@
                                                 be recreated.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="code-score-5" name="code-score-5" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="code-score-5" name="code-score" value="code-score-5"
+                                                disabled>
                                             <label for="code-score-5"><strong>Score 5</strong>: The provenance of each
                                                 line
                                                 of code
@@ -1186,19 +1241,19 @@
 
                                         <p class="pt-4 item-header">Importance</p>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="code-importance-not-important"
                                                 name="code-importance" value="code-not-important" disabled>
                                             <label for="code-importance-not-important">Not Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="code-importance-somewhat-important"
                                                 name="code-importance" value="code-somewhat-important" disabled>
                                             <label for="code-importance-somewhat-important">Somewhat Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="code-importance-very-important"
                                                 name="code-importance" value="code-very-important" disabled>
                                             <label for="code-importance-very-important">Very Important</label>
@@ -1223,21 +1278,24 @@
                                     </summary>
                                     <form id="license-form" data-storage-name="license">
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="license-score-0" name="license-score-0" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="license-score-0" name="license-score"
+                                                value="license-score-0" disabled>
                                             <label for="license-score-0"><strong>Score 0</strong>: Does not meet Score 1
                                                 criteria</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="license-score-1" name="license-score-1" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="license-score-1" name="license-score"
+                                                value="license-score-1" disabled>
                                             <label for="license-score-1"><strong>Score 1</strong>: The code is released
                                                 under
                                                 an OSI- or FSF-approved license.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="license-score-2" name="license-score-2" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="license-score-2" name="license-score"
+                                                value="license-score-2" disabled>
                                             <label for="license-score-2"><strong>Score 2</strong>: Libraries that are
                                                 mandatory
                                                 dependencies of the project's code do not create more restrictions than
@@ -1245,8 +1303,9 @@
                                                 project license does. </label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="license-score-3" name="license-score-3" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="license-score-3" name="license-score"
+                                                value="license-score-3" disabled>
                                             <label for="license-score-3"><strong>Score 3</strong>: The libraries that
                                                 are
                                                 mandatory dependencies of the project's code are available as Open
@@ -1254,8 +1313,9 @@
                                                 software. </label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="license-score-4" name="license-score-4" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="license-score-4" name="license-score"
+                                                value="license-score-4" disabled>
                                             <label for="license-score-4"><strong>Score 4</strong>: Committers are bound
                                                 by
                                                 an
@@ -1265,8 +1325,9 @@
                                             </label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="license-score-5" name="license-score-5" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="license-score-5" name="license-score-5"
+                                                value="license-score-5" disabled>
                                             <label for="license-score-5"><strong>Score 5</strong>: The copyright
                                                 ownership
                                                 of
@@ -1276,20 +1337,20 @@
 
                                         <p class="pt-4 item-header">Importance</p>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="license-importance-not-important"
                                                 name="license-importance" value="license-not-important" disabled>
                                             <label for="license-importance-not-important">Not Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="license-importance-somewhat-important"
                                                 name="license-importance" value="license-somewhat-important" disabled>
                                             <label for="license-importance-somewhat-important">Somewhat
                                                 Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="license-importance-very-important"
                                                 name="license-importance" value="license-very-important" disabled>
                                             <label for="license-importance-very-important">Very Important</label>
@@ -1312,14 +1373,16 @@
                                     </summary>
                                     <form id="release-form" data-storage-name="release">
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="release-score-0" name="release-score-0" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="release-score-0" name="release-score"
+                                                value="release-score-0" disabled>
                                             <label for="release-score-0"><strong>Score 0</strong>: Does not meet Score 1
                                                 criteria</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="release-score-1" name="release-score-1" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="release-score-1" name="release-score"
+                                                value="release-score-1" disabled>
                                             <label for="release-score-1"><strong>Score 1</strong>: Releases consist of
                                                 source
                                                 code, distributed using standard and open archive formats that are
@@ -1327,32 +1390,36 @@
                                                 to stay readable in the long term.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="release-score-2" name="release-score-2" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="release-score-2" name="release-score"
+                                                value="release-score-2" disabled>
                                             <label for="release-score-2"><strong>Score 2</strong>: The project maintains
                                                 a
                                                 section of the website/homepage where all releases and release notes are
                                                 documented and archived.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="release-score-3" name="release-score-3" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="release-score-3" name="release-score"
+                                                value="release-score-3" disabled>
                                             <label for="release-score-3"><strong>Score 3</strong>: Releases are signed
                                                 and/or
                                                 distributed along with digests that can be reliably used to validate the
                                                 downloaded archives.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="release-score-4" name="release-score-4" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="release-score-4" name="release-score"
+                                                value="release-score-4" disabled>
                                             <label for="release-score-4"><strong>Score 4</strong>: The release process
                                                 is
                                                 documented to the extent that it could be handed off to a new release
                                                 manager.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="release-score-5" name="release-score-5" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="release-score-5" name="release-score"
+                                                value="release-score-5" disabled>
                                             <label for="release-score-5"><strong>Score 5</strong>: The release process
                                                 is
                                                 documented and repeatable to the extent that someone new to the project
@@ -1364,20 +1431,20 @@
 
                                         <p class="pt-4 item-header">Importance</p>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="release-importance-not-important"
                                                 name="release-importance" value="release-not-important" disabled>
                                             <label for="release-importance-not-important">Not Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="release-importance-somewhat-important"
                                                 name="release-importance" value="release-somewhat-important" disabled>
                                             <label for="release-importance-somewhat-important">Somewhat
                                                 Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="release-importance-very-important"
                                                 name="release-importance" value="release-very-important" disabled>
                                             <label for="release-importance-very-important">Very Important</label>
@@ -1400,14 +1467,16 @@
                                     </summary>
                                     <form id="quality-form" data-storage-name="quality">
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="quality-score-0" name="quality-score-0" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="quality-score-0" name="quality-score"
+                                                value="quality-score-0" disabled>
                                             <label for="quality-score-0"><strong>Score 0</strong>: Does not meet Score 1
                                                 criteria</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="quality-score-1" name="quality-score-1" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="quality-score-1" name="quality-score"
+                                                value="quality-score-1" disabled>
                                             <label for="quality-score-1"><strong>Score 1</strong>: The project is open
                                                 and
                                                 honest about the quality of its code. Various levels of quality and
@@ -1417,16 +1486,18 @@
                                                 communicated.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="quality-score-2" name="quality-score-2" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="quality-score-2" name="quality-score"
+                                                value="quality-score-2" disabled>
                                             <label for="quality-score-2"><strong>Score 2</strong>: The project puts a
                                                 very
                                                 high
                                                 priority on producing secure software.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="quality-score-3" name="quality-score-3" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="quality-score-3" name="quality-score"
+                                                value="quality-score-3" disabled>
                                             <label for="quality-score-3"><strong>Score 3</strong>: The project provides
                                                 a
                                                 well-documented, secure and private channel to report security issues,
@@ -1434,8 +1505,9 @@
                                                 with a documented way of responding to them.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="quality-score-4" name="quality-score-4" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="quality-score-4" name="quality-score"
+                                                value="quality-score-4" disabled>
                                             <label for="quality-score-4"><strong>Score 4</strong>: The project puts a
                                                 high
                                                 priority on backwards compatibility and aims to document any
@@ -1445,8 +1517,9 @@
                                                 features.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="quality-score-5" name="quality-score-5" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="quality-score-5" name="quality-score"
+                                                value="quality-score-5" disabled>
                                             <label for="quality-score-5"><strong>Score 5</strong>: The project strives
                                                 to
                                                 respond to documented bug reports in a timely manner.</label>
@@ -1454,20 +1527,20 @@
 
                                         <p class="pt-4 item-header">Importance</p>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="quality-importance-not-important"
                                                 name="quality-importance" value="quality-not-important" disabled>
                                             <label for="quality-importance-not-important">Not Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="quality-importance-somewhat-important"
                                                 name="quality-importance" value="quality-somewhat-important" disabled>
                                             <label for="quality-importance-somewhat-important">Somewhat
                                                 Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="quality-importance-very-important"
                                                 name="quality-importance" value="quality-very-important" disabled>
                                             <label for="quality-importance-very-important">Very Important</label>
@@ -1490,17 +1563,17 @@
                                     </summary>
                                     <form id="community-form" data-storage-name="community">
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="community-score-0" name="community-score-0"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="community-score-0" name="community-score"
+                                                value="community-score-0" disabled>
                                             <label for="community-score-0"><strong>Score 0</strong>: Does not meet Score
                                                 1
                                                 criteria</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="community-score-1" name="community-score-1"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="community-score-1" name="community-score"
+                                                value="community-score-1" disabled>
                                             <label for="community-score-1"><strong>Score 1</strong>: The project has a
                                                 homepage
                                                 that points to all the information required to participate in the
@@ -1508,9 +1581,9 @@
                                                 and contribute to the project.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="community-score-2" name="community-score-2"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="community-score-2" name="community-score"
+                                                value="community-score-2" disabled>
                                             <label for="community-score-2"><strong>Score 2</strong>: The community
                                                 welcomes
                                                 contributions from anyone who acts in good faith and in a respectful
@@ -1519,9 +1592,9 @@
                                                 messages/comments and thanks for their contributions.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="community-score-3" name="community-score-3"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="community-score-3" name="community-score"
+                                                value="community-score-3" disabled>
                                             <label for="community-score-3"><strong>Score 3</strong>: Contributions
                                                 include
                                                 not
@@ -1534,9 +1607,9 @@
                                                 constructive and show appreciation.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="community-score-4" name="community-score-4"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="community-score-4" name="community-score"
+                                                value="community-score-4" disabled>
                                             <label for="community-score-4"><strong>Score 4</strong>: The community
                                                 strives
                                                 to be
@@ -1551,9 +1624,9 @@
                                                 and accepting the contribution.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input class="checkbox-limit" type="checkbox" id="community-score-5"
-                                                name="community-score-5" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="community-score-5" name="community-score"
+                                                value="community-score-5" disabled>
                                             <label for="community-score-5"><strong>Score 5</strong>: The way in which
                                                 contributors can be granted more rights such as commit access or
                                                 decision
@@ -1564,13 +1637,13 @@
 
                                         <p class="pt-4 item-header">Importance</p>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="community-importance-not-important"
                                                 name="community-importance" value="community-not-important" disabled>
                                             <label for="community-importance-not-important">Not Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="community-importance-somewhat-important"
                                                 name="community-importance" value="community-somewhat-important"
                                                 disabled>
@@ -1578,7 +1651,7 @@
                                                 Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="community-importance-very-important"
                                                 name="community-importance" value="community-very-important" disabled>
                                             <label for="community-importance-very-important">Very Important</label>
@@ -1601,17 +1674,17 @@
                                     </summary>
                                     <form id="diversity-form" data-storage-name="diversity">
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="diversity-score-0" name="diversity-score-0"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="diversity-score-0" name="diversity-score"
+                                                value="diversity-score-0" disabled>
                                             <label for="diversity-score-0"><strong>Score 0</strong>: Does not meet Score
                                                 1
                                                 criteria</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="diversity-score-1" name="diversity-score-1"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="diversity-score-1" name="diversity-score"
+                                                value="diversity-score-1" disabled>
                                             <label for="diversity-score-1"><strong>Score 1</strong>: The project has a
                                                 published
                                                 code of conduct that applies to all members of the community. The
@@ -1622,9 +1695,9 @@
                                                 and respect.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="diversity-score-2" name="diversity-score-2"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="diversity-score-2" name="diversity-score"
+                                                value="diversity-score-2" disabled>
                                             <label for="diversity-score-2"><strong>Score 2</strong>: The project has
                                                 clear
                                                 processes in place for managing code of conduct reports, including a
@@ -1633,9 +1706,9 @@
                                                 uphold a friendly environment in its communications channels.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="diversity-score-3" name="diversity-score-3"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="diversity-score-3" name="diversity-score"
+                                                value="diversity-score-3" disabled>
                                             <label for="diversity-score-3"><strong>Score 3</strong>: The project has
                                                 established
                                                 practices for welcoming new contributors and ensuring friendly and
@@ -1644,9 +1717,9 @@
                                                 origin.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="diversity-score-4" name="diversity-score-4"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="diversity-score-4" name="diversity-score"
+                                                value="diversity-score-4" disabled>
                                             <label for="diversity-score-4"><strong>Score 4</strong>: Project leadership
                                                 works to
                                                 limit technical jargon and other language that could be off-putting to
@@ -1659,9 +1732,9 @@
                                                 needs of diverse contributors.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="diversity-score-5" name="diversity-score-5"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="diversity-score-5" name="diversity-score"
+                                                value="diversity-score-5" disabled>
                                             <label for="diversity-score-5"><strong>Score 5</strong>: The project
                                                 actively
                                                 works
@@ -1673,13 +1746,13 @@
 
                                         <p class="pt-4 item-header">Importance</p>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="diversity-importance-not-important"
                                                 name="diversity-importance" value="diversity-not-important" disabled>
                                             <label for="diversity-importance-not-important">Not Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="diversity-importance-somewhat-important"
                                                 name="diversity-importance" value="diversity-somewhat-important"
                                                 disabled>
@@ -1687,7 +1760,7 @@
                                                 Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="diversity-importance-very-important"
                                                 name="diversity-importance" value="diversity-very-important" disabled>
                                             <label for="diversity-importance-very-important">Very Important</label>
@@ -1711,27 +1784,27 @@
                                     </summary>
                                     <form id="transparency-form" data-storage-name="transparency">
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="transparency-score-0" name="transparency-score-0"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="transparency-score-0" name="transparency-score"
+                                                value="transparency-score-0" disabled>
                                             <label for="transparency-score-0"><strong>Score 0</strong>: Does not meet
                                                 Score
                                                 1
                                                 criteria</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="transparency-score-1" name="transparency-score-1"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="transparency-score-1" name="transparency-score"
+                                                value="transparency-score-1" disabled>
                                             <label for="transparency-score-1"><strong>Score 1</strong>: The project
                                                 maintains a
                                                 public list of its contributors who have decision power -- the project's
                                                 leadership consists of those contributors.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="transparency-score-2" name="transparency-score-2"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="transparency-score-2" name="transparency-score"
+                                                value="transparency-score-2" disabled>
                                             <label for="transparency-score-2"><strong>Score 2</strong>: Decisions are
                                                 made
                                                 by
@@ -1741,26 +1814,26 @@
                                                 leadership has the final word if needed.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="transparency-score-3" name="transparency-score-3"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="transparency-score-3" name="transparency-score"
+                                                value="transparency-score-3" disabled>
                                             <label for="transparency-score-3"><strong>Score 3</strong>: Documented
                                                 voting
                                                 rules are
                                                 used to build consensus when discussion is not sufficient.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="transparency-score-4" name="transparency-score-4"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="transparency-score-4" name="transparency-score"
+                                                value="transparency-score-4" disabled>
                                             <label for="transparency-score-4"><strong>Score 4</strong>: The project
                                                 maintains a
                                                 public-facing roadmap that is kept up-to-date.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="transparency-score-5" name="transparency-score-5"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="transparency-score-5" name="transparency-score"
+                                                value="transparency-score-5" disabled>
                                             <label for="transparency-score-5"><strong>Score 5</strong>: All "important"
                                                 discussions
                                                 happen asynchronously in written form on the project's main
@@ -1771,14 +1844,14 @@
 
                                         <p class="pt-4 item-header">Importance</p>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="transparency-importance-not-important"
                                                 name="transparency-importance" value="transparency-not-important"
                                                 disabled>
                                             <label for="transparency-importance-not-important">Not Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="transparency-importance-somewhat-important"
                                                 name="transparency-importance" value="transparency-somewhat-important"
                                                 disabled>
@@ -1786,7 +1859,7 @@
                                                 Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="transparency-importance-very-important"
                                                 name="transparency-importance" value="transparency-very-important"
                                                 disabled>
@@ -1811,35 +1884,35 @@
                                     </summary>
                                     <form id="governance-form" data-storage-name="governance">
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="governance-score-0" name="governance-score-0"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="governance-score-0" name="governance-score"
+                                                value="governance-score-0" disabled>
                                             <label for="governance-score-0"><strong>Score 0</strong>: Does not meet
                                                 Score 1
                                                 criteria</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="governance-score-1" name="governance-score-1"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="governance-score-1" name="governance-score"
+                                                value="governance-score-1" disabled>
                                             <label for="governance-score-1"><strong>Score 1</strong>: The project
                                                 maintains
                                                 a
                                                 public list of its leadership.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="governance-score-2" name="governance-score-2"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="governance-score-2" name="governance-score"
+                                                value="governance-score-2" disabled>
                                             <label for="governance-score-2"><strong>Score 2</strong>: The project's
                                                 leadership
                                                 roster clearly states the roles and responsibilities of each
                                                 leader.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="governance-score-3" name="governance-score-3"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="governance-score-3" name="governance-score"
+                                                value="governance-score-3" disabled>
                                             <label for="governance-score-3"><strong>Score 3</strong>: There is
                                                 documentation
                                                 of
@@ -1847,9 +1920,9 @@
                                                 resolved.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="governance-score-4" name="governance-score-4"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="governance-score-4" name="governance-score"
+                                                value="governance-score-4" disabled>
                                             <label for="governance-score-4"><strong>Score 4</strong>: The project has
                                                 clear
                                                 and
@@ -1862,9 +1935,9 @@
                                                 is managed such that there is no single point of failure.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="governance-score-5" name="governance-score-5"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="governance-score-5" name="governance-score"
+                                                value="governance-score-5" disabled>
                                             <label for="governance-score-5"><strong>Score 5</strong>: The project
                                                 maintains
                                                 an
@@ -1875,13 +1948,13 @@
 
                                         <p class="pt-4 item-header">Importance</p>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="governance-importance-not-important"
                                                 name="governance-importance" value="governance-not-important" disabled>
                                             <label for="governance-importance-not-important">Not Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="governance-importance-somewhat-important"
                                                 name="governance-importance" value="governance-somewhat-important"
                                                 disabled>
@@ -1889,7 +1962,7 @@
                                                 Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="governance-importance-very-important"
                                                 name="governance-importance" value="governance-very-important" disabled>
                                             <label for="governance-importance-very-important">Very Important</label>
@@ -1912,26 +1985,26 @@
                                     </summary>
                                     <form id="friendliness-form" data-storage-name="friendliness">
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="friendliness-score-0" name="friendliness-score-0"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="friendliness-score-0" name="friendliness-score"
+                                                value="friendliness-score-0" disabled>
                                             <label for="friendliness-score-0"><strong>Score 0</strong>: Does not meet
                                                 Score
                                                 1
                                                 criteria</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="friendliness-score-1" name="friendliness-score-1"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="friendliness-score-1" name="friendliness-score"
+                                                value="friendliness-score-1" disabled>
                                             <label for="friendliness-score-1"><strong>Score 1</strong>: The project
                                                 maintains a
                                                 user-facing website.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="friendliness-score-2" name="friendliness-score-2"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="friendliness-score-2" name="friendliness-score"
+                                                value="friendliness-score-2" disabled>
                                             <label for="friendliness-score-2"><strong>Score 2</strong>: The project
                                                 website
                                                 includes
@@ -1939,9 +2012,9 @@
                                                 issues).</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="friendliness-score-3" name="friendliness-score-3"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="friendliness-score-3" name="friendliness-score"
+                                                value="friendliness-score-3" disabled>
                                             <label for="friendliness-score-3"><strong>Score 3</strong>: The project
                                                 itself
                                                 contains
@@ -1950,9 +2023,9 @@
                                                 user interface of the project/app.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="friendliness-score-4" name="friendliness-score-4"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="friendliness-score-4" name="friendliness-score"
+                                                value="friendliness-score-4" disabled>
                                             <label for="friendliness-score-4"><strong>Score 4</strong>: The project has
                                                 a
                                                 defined
@@ -1961,9 +2034,9 @@
                                                 are notified when their issues are resolved.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="friendliness-score-5" name="friendliness-score-5"
-                                                disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="friendliness-score-5" name="friendliness-score"
+                                                value="friendliness-score-5" disabled>
                                             <label for="friendliness-score-5"><strong>Score 5</strong>: The project
                                                 strives
                                                 to
@@ -1977,14 +2050,14 @@
 
                                         <p class="pt-4 item-header">Importance</p>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="friendliness-importance-not-important"
                                                 name="friendliness-importance" value="friendliness-not-important"
                                                 disabled>
                                             <label for="friendliness-importance-not-important">Not Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="friendliness-importance-somewhat-important"
                                                 name="friendliness-importance" value="friendliness-somewhat-important"
                                                 disabled>
@@ -1992,7 +2065,7 @@
                                                 Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="friendliness-importance-very-important"
                                                 name="friendliness-importance" value="friendliness-very-important"
                                                 disabled>
@@ -2018,26 +2091,26 @@
                                     </summary>
                                     <form id="sustainability-form" data-storage-name="sustainability">
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="sustainability-score-0"
-                                                name="sustainability-score-0" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="sustainability-score-0" name="sustainability-score"
+                                                value="sustainability-score-0" disabled>
                                             <label for="sustainability-score-0"><strong>Score 0</strong>: Does not meet
                                                 Score 1
                                                 criteria</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="sustainability-score-1"
-                                                name="sustainability-score-1" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="sustainability-score-1" name="sustainability-score"
+                                                value="sustainability-score-1" disabled>
                                             <label for="sustainability-score-1"><strong>Score 1</strong>: The project
                                                 has
                                                 published
                                                 some code and there is at least one user of it.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="sustainability-score-2"
-                                                name="sustainability-score-2" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="sustainability-score-2" name="sustainability-score"
+                                                value="sustainability-score-2" disabled>
                                             <label for="sustainability-score-2"><strong>Score 2</strong>: The project
                                                 has a
                                                 small team
@@ -2046,9 +2119,9 @@
                                                 into who the users are and how they come across the project.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="sustainability-score-3"
-                                                name="sustainability-score-3" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="sustainability-score-3" name="sustainability-score"
+                                                value="sustainability-score-3" disabled>
                                             <label for="sustainability-score-3"><strong>Score 3</strong>: There are
                                                 multiple
                                                 developers or development teams spread out at different institutions,
@@ -2058,9 +2131,9 @@
                                                 illuminate who the users of the project are.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="sustainability-score-4"
-                                                name="sustainability-score-4" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="sustainability-score-4" name="sustainability-score"
+                                                value="sustainability-score-4" disabled>
                                             <label for="sustainability-score-4"><strong>Score 4</strong>: The project
                                                 has a
                                                 self-governing developer community deliberately supporting a broad user
@@ -2069,9 +2142,9 @@
                                                 and pursued.</label>
                                         </div>
 
-                                        <div class="form-group">
-                                            <input type="checkbox" id="sustainability-score-5"
-                                                name="sustainability-score-5" disabled>
+                                        <div class="form-group disabled">
+                                            <input type="radio" id="sustainability-score-5" name="sustainability-score"
+                                                value="sustainability-score-5" disabled>
                                             <label for="sustainability-score-5"><strong>Score 5</strong>: The project is
                                                 a
                                                 self-sustaining organization dedicated to supporting the user and
@@ -2083,14 +2156,14 @@
 
                                         <p class="pt-4 item-header">Importance</p>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="sustainability-importance-not-important"
                                                 name="sustainability-importance" value="sustainability-not-important"
                                                 disabled>
                                             <label for="sustainability-importance-not-important">Not Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="sustainability-importance-somewhat-important"
                                                 name="sustainability-importance"
                                                 value="sustainability-somewhat-important" disabled>
@@ -2098,7 +2171,7 @@
                                                 Important</label>
                                         </div>
 
-                                        <div class="form-group">
+                                        <div class="form-group disabled">
                                             <input type="radio" id="sustainability-importance-very-important"
                                                 name="sustainability-importance" value="sustainability-very-important"
                                                 disabled>
@@ -2748,6 +2821,7 @@
                     if (currentSelected() > max) {
                         if (box.checked) {
                             box.checked = false;
+                            alert("You have already selected 5 items!");
                         }
                     } else {
                         const id = box.parentElement.parentElement.parentElement.id.replace("-review", "");
