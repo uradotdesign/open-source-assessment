@@ -303,6 +303,11 @@ textarea:focus-visible {
   pointer-events: none;
 }
 
+.active-1 {
+  color: #005cab;
+  font-weight: 700;
+}
+
 button.back:disabled {
   color: #0d5cab;
   background: transparent;
@@ -423,6 +428,7 @@ button.next:hover {
   width: 0 !important;
 }
 
+.nav-pills .nav-link.active-1:before,
 .nav-pills .nav-link.active:before {
   counter-increment: counter;
   content: "" counter(counter) "";
@@ -444,12 +450,13 @@ button.next:hover {
   text-transform: uppercase;
   align-items: center;
   padding: 5px 15px;
-  color: #000000;
+  color: #000000 !important;
   background-color: transparent !important;
 }
 
+.nav-pills .nav-link.active-1,
 .nav-pills .nav-link.active {
-  color: #005cab;
+  color: #005cab !important;
   font-weight: 700;
 }
 

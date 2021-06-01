@@ -2804,7 +2804,7 @@
                         recheckAndDisplay();
                     })
                 })
-            });
+            }); // I guess you know what I meant. Adding classes "active" or something to 1 and 2 when you are on step 3?, when you're at step 2, step 1 and 2 are active, when you're at 3, step 1,2,3 are active, and so on. are they active by default rn? no, they only go active when clicked on. cool gotit
         </script>
 
         <script>
@@ -2844,6 +2844,9 @@
         </script>
 
         <script>
+            const steps = ["pills-assess-tab", "pills-strategize-tab", "pills-review-tab", "pills-discuss-tab"];
+            const stepElements = steps.map((step) => document.getElementById(step));
+
             const tabs = document.querySelectorAll('button[data-bs-toggle="pill"]');
             const key = "tab-state";
 
@@ -2852,6 +2855,19 @@
                     const selected = event.target.attributes["data-bs-target"].value.replace("#", "");
                     localStorage.setItem(key, selected);
                 });
+
+                tab.addEventListener('shown.bs.tab', (event) => {
+                    const index = steps.indexOf(event.target.id);
+
+                    stepElements.slice(index + 1).forEach((step) => {
+                        step.classList.remove("active-1");
+                        console.log(step)
+                    });
+                    stepElements.slice(0, index + 1).forEach((step) => {
+                        step.classList.add("active-1");
+                        // this works now fine sor, I just need to color the lines too and it's ok. a final thing which I didn't manage to find out why it happens, see on other screen when I click the buttons, they are supposed to move things to top of window, but for example the back button doesn't, it stays at the end
+                    });
+                })
             });
         </script>
 
@@ -2901,7 +2917,9 @@
 
         <script>
             function scrollTop() {
-                window.scrollTo(0, 0);
+                setTimeout(() => {
+                    window.scrollTo(0, 0);
+                }, 100)
             }
             function toggleDisplay(id) {
                 var el = document.getElementById(id);
@@ -2917,7 +2935,7 @@
                 var tab = new bootstrap.Tab(strategizeTab);
 
                 tab.show();
-                scrollTop()
+                scrollTop();
             }
             function thirdpage() {
                 var reviewTab = document.querySelector('#pills-review-tab');
