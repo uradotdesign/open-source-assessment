@@ -9,3 +9,6 @@ nav,
 .finish-assessment {
   display: none !important;
 }
+details[open] > *:not(summary) {
+  animation: none !important;
+}

@@ -500,7 +500,7 @@ ul {
   color: #0d5cab;
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .nav-pills .nav-link:after {
     position: absolute;
     content: "";
