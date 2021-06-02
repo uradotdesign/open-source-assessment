@@ -2874,6 +2874,47 @@
             };
         </script>
 
+        <script>
+            let textareas = document.getElementsByTagName('textarea'),
+                hiddenDiv = document.createElement('div'),
+                content = null;
+
+            for (let j of textareas) {
+                j.classList.add('text');
+            }
+            hiddenDiv.classList.add('txta');
+
+            for (let i of textareas) {
+                (function (i) {
+                    i.addEventListener('input', function () {
+
+                        i.parentNode.appendChild(hiddenDiv);
+
+                        // This removes scrollbars
+                        i.style.overflow = 'hidden';
+
+                        // Every input/change, grab the content
+                        content = i.value;
+
+                        // This is for old IE
+                        content = content.replace(/\n/g, '<br>');
+
+                        // This fixes the jumpy way the textarea grows if line-height isn't included
+                        hiddenDiv.innerHTML = content + '<br style="line-height: 5px;">';
+
+                        // Briefly make the hidden div block but invisible
+                        // This is in order to read the height
+                        hiddenDiv.style.visibility = 'hidden';
+                        hiddenDiv.style.display = 'block';
+                        i.style.height = hiddenDiv.offsetHeight + 'px';
+
+                        // Make the hidden div display:none again
+                        hiddenDiv.style.visibility = 'visible';
+                        hiddenDiv.style.display = 'none';
+                    });
+                })(i);
+            }
+        </script>
 </body>
 
 </html>

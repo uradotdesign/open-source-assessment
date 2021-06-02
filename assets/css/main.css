@@ -286,6 +286,12 @@ textarea:focus-visible {
   outline: 2px solid #0d5cab;
 }
 
+.txta {
+  display: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 .form-group {
   display: flex;
   flex-wrap: nowrap;
